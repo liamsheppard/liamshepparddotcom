@@ -173,6 +173,7 @@ header {
 
 #home-header {
     height: 100vh;
+	position: relative;
 
 	h1 {
 		padding-top: 25vh;
@@ -186,6 +187,13 @@ header {
 		padding-top: 15vh;
 		margin-bottom: 10px;
 	}
+}
+
+#scrollimg {
+	display: block;
+	position: absolute;
+	bottom: 60px;
+	left: calc(50vw - 5px);
 }
 
 // Homepage Content
@@ -942,20 +950,14 @@ footer {
 		width: 250px;
 	}
 
-	.button .button-fill-right {
-		height: 38px;
+	.button .button-fill-right,
+	.button:hover .button-fill-down {
+		height: 39px;
 	}
 
-	.button:hover .button-fill-right {
-		width: 250px;
-	}
-
+	.button:hover .button-fill-right,
 	.button .button-fill-down {
 		width: 250px;
-	}
-
-	.button:hover .button-fill-down {
-		height: 38px;
 	}
 
 	#footer-twitter-widget {

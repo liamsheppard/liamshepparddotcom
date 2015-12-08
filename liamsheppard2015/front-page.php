@@ -1,10 +1,11 @@
 <?php get_header(); ?>
-		
+
 		<header id='home-header'>
             <h1><?php bloginfo('name'); ?></h1>
             <h2><?php bloginfo('description'); ?></h2>
+			<img src='<?php bloginfo('stylesheet_directory'); ?>/img/scrolldn.png' id='scrollimg'>
         </header>
-        
+
         <article>
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 				the_content();
@@ -23,7 +24,7 @@
 						the_post_thumbnail();
 					}; ?>
                 </figure>
-                
+
                 <figcaption class='home-figcaption'>
                     <h4><?php the_title(); ?></h4>
                     <h5>For <?php echo get_post_meta($post->ID, "project_client", true); ?>,
@@ -37,18 +38,18 @@
 			<?php endwhile; ?>
 			<?php endif; ?>
 			<?php $post_no = 0; ?>
-			
+
 			<div class='more-button'>
 				<a href='<?php get_site_url(); ?>/projects' class='button button-down'><span class='button-fill button-fill-down'></span>More Projects</a>
 			</div>
-            
+
             <h3 class='dark-bg'>Latest Blog Posts</h3>
-			
+
 			<?php query_posts( array ( 'category_name' => 'blog', 'posts_per_page' => 2 ) ); ?>
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<?php $post_mod = $post_no % 2; ?>
 			<div class='blogpost clearfix <?php if ( $post_mod == 1 ) { echo 'dark-bg'; } ?>'>
-				
+
                 <figcaption class='home-figcaption blog-figcaption'>
                     <h4><?php the_title(); ?></h4>
                     <h5>Published <?php the_date('F j, Y'); ?></h5>
@@ -59,14 +60,14 @@
 			<hr class='divider'>
 			<?php $post_no = $post_no + 1; ?>
 			<?php endwhile; ?>
-			
+
 			<?php endif; ?>
-			
+
             <div class='more-button'>
 				<a href='<?php get_site_url(); ?>/blog' class='button button-down'><span class='button-fill button-fill-down'></span>More Posts</a>
 			</div>
-			
-			
+
+
 			<!-- Twitter Scrolling Feed -->
 			<?php if ( is_active_sidebar( 'twitter-widget' ) ) : ?>
 				<div id='footer-twitter-widget' class='widget-area' role='complementary'>
@@ -74,7 +75,7 @@
 					<?php dynamic_sidebar( 'twitter-widget' ); ?>
 				</div>
 			<?php endif; ?>
-			
+
         </article>
 
 <?php get_footer(); ?>
