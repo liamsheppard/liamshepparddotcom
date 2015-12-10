@@ -793,13 +793,15 @@ footer {
 
 // Selected Text
 
+// 0.99 opacity is a workaround to make selected text not transparent.
+
 ::-moz-selection {
-    background: $primary;
+    background: rgba($primary, 0.99);
     color: $white;
 }
 
 ::selection {
-    background: $primary;
+    background: rgba($primary, 0.99);
     color: $white;
 }
 

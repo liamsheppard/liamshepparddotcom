@@ -17,5 +17,5 @@ gulp.task('minify-css', function() {
 });
 
 gulp.task('style:watch', function () {
-  gulp.watch('./liamsheppard2015/sass/**/*.scss', ['styles']);
+  gulp.watch('./liamsheppard2015/sass/**/*.scss', ['default']);
 });
