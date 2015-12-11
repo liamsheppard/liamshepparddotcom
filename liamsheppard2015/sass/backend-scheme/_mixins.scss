@@ -3,32 +3,31 @@
  * highlights/shadows, based on a base color.
  */
 @mixin button( $button-color, $text-color: white ) {
-	background: $button-color;
-	border-color: darken( $button-color, 10% ) darken( $button-color, 15% ) darken( $button-color, 15% );
-	color: $text-color;
-	box-shadow: 0 1px 0 darken( $button-color, 15% );
-	text-shadow: 0 -1px 1px darken( $button-color, 15% ),
-		1px 0 1px darken( $button-color, 15% ),
-		0 1px 1px darken( $button-color, 15% ),
-		-1px 0 1px darken( $button-color, 15% );
+	background: rgba( $button-color, 0 );
+	border-color: $button-color;
+	border-radius: 0;
+	border-width: 1px;
+	color: $button-color;
+	box-shadow: 0 0 0 $button-color;
+	text-shadow: 0 0 0 $button-color;
 
 	&:hover,
 	&:focus {
-		background: lighten( $button-color, 3% );
-		border-color: darken( $button-color, 15% );
+		background: $button-color;
+		border-color: $button-color;
 		color: $text-color;
-		box-shadow: 0 1px 0 darken( $button-color, 15% );
+		box-shadow: 0 0 0 $button-color;
 	}
 
 	&:focus {
-		box-shadow: inset 0 1px 0 darken( $button-color, 10% ),
-					0 0 2px 1px #33b3db;
+		box-shadow: 0 0 0 $button-color;
+		background: $button-color;
 	}
 
 	&:active {
-		background: darken( $button-color, 10% );
-		border-color: darken( $button-color, 15% );
-	 	box-shadow: inset 0 2px 0 darken( $button-color, 15% );
+		background: $button-color;
+		border-color: $button-color;
+	 	box-shadow: 0 0 0 $button-color;
 	}
 
 	&[disabled],

@@ -24,7 +24,7 @@ function ls2015_widgets() {
 		'name'          => 'Twitter Widget',
 		'id'            => 'twitter-widget',
 	) );
-	
+
 	register_sidebar( array(
 		'name'          => 'Share Widget',
 		'id'            => 'share-widget',
@@ -32,5 +32,13 @@ function ls2015_widgets() {
 
 }
 add_action( 'widgets_init', 'ls2015_widgets' );
+
+wp_admin_css_color(
+      'ls2015',
+      __('liamsheppard2015'),
+      get_template_directory_uri() . '/minified-css/backend-scheme/colors.min.css',
+      array('#242b2e', '#293135', '#27daa5', '#ed70a5'),
+      array( 'base' => '#27daa5', 'focus' => '#27daa5', 'current' => '#27daa5' )
+  );
 
 ?>

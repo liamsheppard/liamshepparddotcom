@@ -3,7 +3,7 @@
  * highlights/shadows, based on a base color.
  */
 html {
-  background: #f1f1f1; }
+  background: #fafdff; }
 
 /* Links */
 a {
@@ -30,22 +30,25 @@ input[type=radio]:checked:before {
 
 /* Core UI */
 .wp-core-ui .button-primary {
-  background: #ed70a5;
-  border-color: #e74388 #e42c7a #e42c7a;
-  color: white;
-  box-shadow: 0 1px 0 #e42c7a;
-  text-shadow: 0 -1px 1px #e42c7a, 1px 0 1px #e42c7a, 0 1px 1px #e42c7a, -1px 0 1px #e42c7a; }
+  background: rgba(237, 112, 165, 0);
+  border-color: #ed70a5;
+  border-radius: 0;
+  border-width: 1px;
+  color: #ed70a5;
+  box-shadow: 0 0 0 #ed70a5;
+  text-shadow: 0 0 0 #ed70a5; }
   .wp-core-ui .button-primary:hover, .wp-core-ui .button-primary:focus {
-    background: #ef7eae;
-    border-color: #e42c7a;
+    background: #ed70a5;
+    border-color: #ed70a5;
     color: white;
-    box-shadow: 0 1px 0 #e42c7a; }
+    box-shadow: 0 0 0 #ed70a5; }
   .wp-core-ui .button-primary:focus {
-    box-shadow: inset 0 1px 0 #e74388, 0 0 2px 1px #33b3db; }
+    box-shadow: 0 0 0 #ed70a5;
+    background: #ed70a5; }
   .wp-core-ui .button-primary:active {
-    background: #e74388;
-    border-color: #e42c7a;
-    box-shadow: inset 0 2px 0 #e42c7a; }
+    background: #ed70a5;
+    border-color: #ed70a5;
+    box-shadow: 0 0 0 #ed70a5; }
   .wp-core-ui .button-primary[disabled], .wp-core-ui .button-primary:disabled, .wp-core-ui .button-primary.button-primary-disabled, .wp-core-ui .button-primary.disabled {
     color: #d1c7cb !important;
     background: #e84c8e !important;
@@ -121,8 +124,8 @@ input[type=radio]:checked:before {
 .about-wrap h2 .nav-tab-active,
 .nav-tab-active,
 .nav-tab-active:hover {
-  background-color: #f1f1f1;
-  border-bottom-color: #f1f1f1; }
+  background-color: #fafdff;
+  border-bottom-color: #fafdff; }
 
 /* Admin Menu: submenu */
 #adminmenu .wp-submenu,
@@ -169,7 +172,7 @@ input[type=radio]:checked:before {
 
 ul#adminmenu a.wp-has-current-submenu:after,
 ul#adminmenu > li.current > a.current:after {
-  border-right-color: #f1f1f1; }
+  border-right-color: #fafdff; }
 
 #adminmenu li.current a.menu-top,
 #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,
