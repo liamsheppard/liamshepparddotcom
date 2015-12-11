@@ -1,11 +1,11 @@
 <footer>
-	
+
             <h5>Want to hire me?</h5>
             <a href='<?php get_site_url(); ?>/contact' id='footer-contact' class='button button-down'><span class='button-fill button-fill-down'></span>Let's Get in Contact!</a>
-			
+
 			<h5>...or you can follow me</h5>
 			<div id='social-media' class='clearfix'>
-				<a href='https://www.facebook.com/liamshepparduxui' class='svg-link' target="_blank"><svg id='facebook-svg' class='footer-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'
+				<a href='https://www.facebook.com/liamshepparduxui' class='svg-link' target='_blank'><svg id='facebook-svg' class='footer-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'
 					 viewBox='0 0 50 50' xml:space='preserve'>
 				<rect x='1.8' y='2' class='st0' width='46.5' height='44'/>
 				<g>
@@ -14,8 +14,8 @@
 				</g>
 				<path class='st2' d='M0,0v50h50V0H0z M47,44H3V3h44V44z'/>
 				</svg></a>
-				
-				<a href='https://twitter.com/LiamPSheppard' class='svg-link' target="_blank"><svg id='twitter-svg' class='footer-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'
+
+				<a href='https://twitter.com/LiamPSheppard' class='svg-link' target='_blank'><svg id='twitter-svg' class='footer-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'
 					 viewBox='0 0 50 50' style='enable-background:new 0 0 50 50;' xml:space='preserve'>
 					<rect x='1.8' y='2' class='st0' width='46.5' height='44'/>
 					<path class='st1' d='M0,0v50h50V0H0z M47,44H3V3h44V44z'/>
@@ -28,7 +28,7 @@
 					</g>
 				</svg></a>
 
-				<a href='https://dribbble.com/LiamSheppard' class='svg-link' target="_blank"><svg id='dribbble-svg' class='footer-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'
+				<a href='https://dribbble.com/LiamSheppard' class='svg-link' target='_blank'><svg id='dribbble-svg' class='footer-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'
 					 viewBox='0 0 50 50' style='enable-background:new 0 0 50 50;' xml:space='preserve'>
 				<rect x='1.8' y='2' class='st0' width='46.5' height='44'/>
 				<path class='st1' d='M0,0v50h50V0H0z M47,44H3V3h44V44z'/>
@@ -41,7 +41,7 @@
 					c4.4-1.8,6.5-4.4,6.7-4.7c1.7,2,2.7,4.6,2.7,7.5C37.1,23.8,33.1,23,29.1,23.5z'/>
 					</svg></a>
 
-				<a href='https://github.com/Liam-Sheppard' class='svg-link' target="_blank"><svg  id='github-svg' class='footer-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'
+				<a href='https://github.com/Liam-Sheppard' class='svg-link' target='_blank'><svg  id='github-svg' class='footer-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'
 					 viewBox='0 0 50 50' style='enable-background:new 0 0 50 50;' xml:space='preserve'>
 				<rect x='1.8' y='2' class='st0' width='46.5' height='44'/>
 				<path class='st1' d='M0,0v50h50V0H0z M47,44H3V3h44V44z'/>
@@ -53,14 +53,14 @@
 					C39.6,16,33.3,9.7,25.5,9.7'/>
 				</svg></a>
 
-				
+
 			</div>
-				
+
             <p>&copy; <?php echo bloginfo('name'); echo ' '; echo date('Y'); ?></p>
         </footer>
     </div><!-- End of Wrapper -->
-    
-    <?php wp_footer(); ?> 
+
+    <?php wp_footer(); ?>
 </body>
 
 </html>

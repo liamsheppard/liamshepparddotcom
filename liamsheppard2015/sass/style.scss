@@ -147,6 +147,13 @@ h1, h3, h4 {
 	}
 }
 
+#logo-navbar {
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	left: 5vw;
+	top: 8px;
+}
 
 
 // Homepage Header
@@ -174,6 +181,7 @@ header {
 #home-header {
     height: 100vh;
 	position: relative;
+	overflow: hidden;
 
 	h1 {
 		padding-top: 25vh;
@@ -189,11 +197,38 @@ header {
 	}
 }
 
-#scrollimg {
+#scroll-tri {
+	display: none;
+}
+
+#logo-homepage-wrapper {
+	display: block;
+	position: relative;
+	margin: 8px auto 20px;
+	width: 24px;
+	height: 24px;
+}
+
+#logo-homepage {
+	width: 24px;
+	height: 24px;
+}
+
+.logo-homepage-line {
 	display: block;
 	position: absolute;
-	bottom: 60px;
-	left: calc(50vw - 5px);
+	top: 10px;
+	height: 1px;
+	width: 100px;
+	background-color: $primary;
+}
+
+#logo-homepage-line-right {
+	left: 40px
+}
+
+#logo-homepage-line-left {
+	right: 40px
 }
 
 // Homepage Content
@@ -469,14 +504,6 @@ article {
 
 .button:hover {
 	color: $white;
-}
-
-.button-right {
-	border-left: 4px solid $secondary;
-}
-
-.button-down {
-	border-top: 4px solid $secondary;
 }
 
 .button .button-fill {
@@ -830,6 +857,30 @@ footer {
         font-size: 2em;
     }
 
+	#scroll-tri {
+		display: block;
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		left: calc( 50% - 12px );
+		animation-name: scroll-tri-animation;
+	    animation-duration: 1.5s;
+		animation-iteration-count: infinite;
+	    animation-direction: alternate;
+		animation-timing-function: ease-in-out;
+	}
+
+	@keyframes scroll-tri-animation {
+	    0%   {
+			opacity: 1;
+			bottom: 25px;
+		}
+	    100%  {
+			opacity: 0.3;
+			bottom: 35px;
+		}
+	}
+
     #mobile-nav {
         visibility: hidden;
     }
@@ -1083,7 +1134,7 @@ footer {
 			color: $white;
 			font-weight: 300;
 			top: 7px;
-			left: 5vw;
+			left: calc( 5vw + 45px );
 			font-size: 1.2rem;
 		}
 
@@ -1113,6 +1164,31 @@ footer {
 		h1 {
 			padding-top: 130px;
 		}
+	}
+
+	#logo-homepage-wrapper {
+		margin: 25px auto;
+		width: 40px;
+		height: 40px;
+	}
+
+	#logo-homepage {
+		width: 40px;
+		height: 40px;
+	}
+
+	.logo-homepage-line {
+		top: 15px;
+		height: 2px;
+		width: 270px;
+	}
+
+	#logo-homepage-line-right {
+		left: 60px
+	}
+
+	#logo-homepage-line-left {
+		right: 60px
 	}
 
 	.project, .blogpost {

@@ -2,8 +2,13 @@
 
 		<header id='home-header'>
             <h1><?php bloginfo('name'); ?></h1>
+			<div id='logo-homepage-wrapper'>
+				<img src='<?php bloginfo('stylesheet_directory'); ?>/img/logo.svg' id='logo-homepage'>
+				<hr class='logo-homepage-line' id='logo-homepage-line-left'>
+				<hr class='logo-homepage-line' id='logo-homepage-line-right'>
+			</div>
             <h2><?php bloginfo('description'); ?></h2>
-			<img src='<?php bloginfo('stylesheet_directory'); ?>/img/scrolldn.png' id='scrollimg'>
+			<img src='<?php bloginfo('stylesheet_directory'); ?>/img/down.svg' id='scroll-tri'>
         </header>
 
         <article>

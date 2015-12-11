@@ -37,6 +37,7 @@
         </nav>
 
         <nav id='wide-nav'>
-			<a href='<?php echo get_bloginfo( 'url' )?>'><h5 id='menu-name'><?php bloginfo('name'); ?></h5></a>
+			<a href='<?php echo get_bloginfo( 'url' )?>' class='svg-link'><img src='<?php bloginfo('stylesheet_directory'); ?>/img/logo.svg' id='logo-navbar'></a>
+            <a href='<?php echo get_bloginfo( 'url' )?>'><h5 id='menu-name'><?php bloginfo('name'); ?></h5></a>
             <?php wp_nav_menu(array('menu' => 'Navigation')); ?>
         </nav>
