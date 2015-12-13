@@ -21,6 +21,7 @@ Tags:
 
 // Raleway
 @import url(https://fonts.googleapis.com/css?family=Raleway:100,300,500);
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,300);
 
 // Define Colours
 $darkest:    #242b2e;
@@ -33,6 +34,9 @@ $tertiary:   #27daa5;
 
 $transition-bezier: 1.000, 0.000, 0.000, 1.000;
 $transition-len: 0.4s;
+
+$raleway: 'Raleway', sans-serif;
+$quicksand: 'Quicksand', sans-serif;
 
 // Browser Reset
 @import '_reset.scss';
@@ -50,13 +54,21 @@ body {
 	overflow-x: hidden;
 	color: $dark;
 	background: $dark;
-	font-family: 'Raleway', sans-serif;
+	font-family: $raleway;
 }
 
-h1, h3, h4 {
-	font-family: 'Raleway', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $quicksand;
 }
 
+nav h5 {
+	font-family: $raleway;
+}
 
 
 // Mobile Navigation
@@ -160,16 +172,18 @@ h1, h3, h4 {
 
 h1 {
 	margin: 0 auto 20px;
-	font-size: 22pt;
+	font-size: 20pt;
 	text-align: center;
-	font-weight: 300;
+	font-weight: 400;
 	color: $primary;
+	font-family: $quicksand;
 }
 
 #home-header h2, #page-header h2 {
-	font-size: 16pt;
+	font-family: $quicksand;
+	font-size: 14pt;
 	text-align: center;
-	font-weight: 100;
+	font-weight: 300;
 	color: $white;
 }
 
@@ -257,7 +271,6 @@ article {
 	}
 
 	h5 {
-		font-family: 'Raleway', sans-serif;
 		margin: 10px 0 30px;
 		text-align: center;
 		font-size: 15pt;
@@ -279,10 +292,6 @@ article {
     .home-figcaption {
         padding: 6vh 7.5vw 4vh;
     }
-
-	.blog-figcaption p {
-		text-indent: 12pt;
-	}
 }
 
 .project, .blogpost {
@@ -317,7 +326,6 @@ article {
 
 	p {
 		font-size: 12pt;
-		text-indent: 20pt;
 		padding: 0;
 		margin-bottom: 10px;
 	}
@@ -352,11 +360,11 @@ article {
 
 	a {
 		color: $primary;
-	}
 
-	a:hover, a:active {
-		background-color: rgba($primary, 1);
-		color: $white;
+		&:hover, &:active {
+			background-color: $primary;
+			color: $white;
+		}
 	}
 
 	hr {
@@ -369,7 +377,6 @@ article {
 
 	.center {
 		text-align: center;
-		text-indent: 0pt;
 	}
 
 	q {
@@ -379,11 +386,6 @@ article {
 		display: block;
 		font-size: 14pt;
 		font-weight: 500;
-		text-indent: 0pt!important;
-
-		p {
-			text-indent: 0pt;
-		}
 
 		b {
 			font-weight: 500;
@@ -438,7 +440,7 @@ article {
 		background: $primary;
 		padding: 6px;
 		color: $white;
-		font-family: 'Raleway', sans-serif;
+		font-family: $raleway;
 		font-size: 12pt;
 		line-height: 1.2;
 		border-radius: 0;
@@ -492,18 +494,22 @@ article {
 	margin: 0 auto;
 	display: block;
 	padding: 14px 0;
-	font-family: 'raleway', sans-serif;
-	font-weight: 400;
 	text-align: center;
 	font-size: 14pt;
 	transition: color $transition-len cubic-bezier($transition-bezier);
 	color: $secondary;
 	border: 2px solid $secondary;
 	z-index: 10;
-}
+	font-family: $quicksand;
+	font-weight: 400;
 
-.button:hover {
-	color: $white;
+	&:hover {
+		color: $white;
+	}
+
+	&:active {
+		background: $secondary;
+	}
 }
 
 .button .button-fill {
@@ -545,15 +551,16 @@ article {
 		border-color: $white;
 		color: $white;
 		margin: 0 auto;
+
+		&:active, &:hover {
+			color: $tertiary;
+		}
 	}
 
 	.button-fill {
 		background: $white;
 	}
 
-	.button:active, .button:hover {
-		color: $tertiary;
-	}
 }
 
 .divider {
@@ -851,6 +858,7 @@ footer {
     header h1 {
 		padding-top: 35vh;
         font-size: 3.5em;
+		font-weight: 300;
     }
 
     header h2 {
@@ -1074,7 +1082,7 @@ footer {
 	#wide-nav {
 		height: 40px;
 		background: $dark;
-		font-family: 'Raleway', sans-serif;
+		font-family: $raleway;
 
 		ul {
 			position: absolute;
@@ -1211,10 +1219,6 @@ footer {
 			margin: 3vw 0 0;
 			padding: 0;
 		}
-
-		.blog-figcaption p {
-			text-indent: 25pt;
-		}
 	}
 
 	.blogpost {
@@ -1243,9 +1247,10 @@ footer {
 		}
 
 		p {
-			font-size: 14pt;
+			font-size: 16pt;
 			padding-bottom: 15px;
 			margin-left: 15px;
+			line-height: 1.5;
 		}
 
 		.button {
@@ -1259,7 +1264,6 @@ footer {
 		margin: 50px auto;
 
 		p {
-			text-indent: 25pt;
 			font-size: 14pt;
 		}
 

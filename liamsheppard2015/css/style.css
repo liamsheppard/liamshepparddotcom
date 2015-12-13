@@ -14,6 +14,7 @@ Tags:
 /* --- IMPORTS --- */
 /* --------------- */
 @import url(https://fonts.googleapis.com/css?family=Raleway:100,300,500);
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,300);
 body,
 article,
 aside,
@@ -69,10 +70,18 @@ body {
   overflow-x: hidden;
   color: #293135;
   background: #293135;
-  font-family: 'Raleway', sans-serif; }
+  font-family: "Raleway", sans-serif; }
 
-h1, h3, h4 {
-  font-family: 'Raleway', sans-serif; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Quicksand", sans-serif; }
+
+nav h5 {
+  font-family: "Raleway", sans-serif; }
 
 #mobile-nav {
   position: fixed;
@@ -152,15 +161,17 @@ h1, h3, h4 {
 
 h1 {
   margin: 0 auto 20px;
-  font-size: 22pt;
+  font-size: 20pt;
   text-align: center;
-  font-weight: 300;
-  color: #27daa5; }
+  font-weight: 400;
+  color: #27daa5;
+  font-family: "Quicksand", sans-serif; }
 
 #home-header h2, #page-header h2 {
-  font-size: 16pt;
+  font-family: "Quicksand", sans-serif;
+  font-size: 14pt;
   text-align: center;
-  font-weight: 100;
+  font-weight: 300;
   color: #fafdff; }
 
 header {
@@ -227,7 +238,6 @@ article {
     font-size: 22pt;
     font-weight: 400; }
   article h5 {
-    font-family: 'Raleway', sans-serif;
     margin: 10px 0 30px;
     text-align: center;
     font-size: 15pt;
@@ -242,8 +252,6 @@ article {
     font-weight: 500; }
   article .home-figcaption {
     padding: 6vh 7.5vw 4vh; }
-  article .blog-figcaption p {
-    text-indent: 12pt; }
 
 .project, .blogpost {
   padding: 2.5vh 0 0; }
@@ -269,7 +277,6 @@ article {
   display: block; }
   .post-content p {
     font-size: 12pt;
-    text-indent: 20pt;
     padding: 0;
     margin-bottom: 10px; }
   .post-content h1 {
@@ -294,9 +301,9 @@ article {
     font-weight: 500; }
   .post-content a {
     color: #27daa5; }
-  .post-content a:hover, .post-content a:active {
-    background-color: #27daa5;
-    color: #fafdff; }
+    .post-content a:hover, .post-content a:active {
+      background-color: #27daa5;
+      color: #fafdff; }
   .post-content hr {
     width: 80%;
     border: none;
@@ -304,18 +311,14 @@ article {
     background: #27daa5;
     margin: 20px auto; }
   .post-content .center {
-    text-align: center;
-    text-indent: 0pt; }
+    text-align: center; }
   .post-content q {
     width: 100%;
     margin: 0 auto;
     text-align: center;
     display: block;
     font-size: 14pt;
-    font-weight: 500;
-    text-indent: 0pt !important; }
-    .post-content q p {
-      text-indent: 0pt; }
+    font-weight: 500; }
     .post-content q b {
       font-weight: 500;
       color: #242b2e; }
@@ -353,7 +356,7 @@ article {
     background: #27daa5;
     padding: 6px;
     color: #fafdff;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 12pt;
     line-height: 1.2;
     border-radius: 0; }
@@ -395,17 +398,18 @@ article {
   margin: 0 auto;
   display: block;
   padding: 14px 0;
-  font-family: 'raleway', sans-serif;
-  font-weight: 400;
   text-align: center;
   font-size: 14pt;
   transition: color 0.4s cubic-bezier(1, 0, 0, 1);
   color: #ed70a5;
   border: 2px solid #ed70a5;
-  z-index: 10; }
-
-.button:hover {
-  color: #fafdff; }
+  z-index: 10;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400; }
+  .button:hover {
+    color: #fafdff; }
+  .button:active {
+    background: #ed70a5; }
 
 .button .button-fill {
   z-index: -5;
@@ -440,10 +444,10 @@ article {
     border-color: #fafdff;
     color: #fafdff;
     margin: 0 auto; }
+    .more-button .button:active, .more-button .button:hover {
+      color: #27daa5; }
   .more-button .button-fill {
     background: #fafdff; }
-  .more-button .button:active, .more-button .button:hover {
-    color: #27daa5; }
 
 .divider {
   background: #27daa5;
@@ -646,7 +650,8 @@ footer {
 @media screen and (min-device-width: 400px) and (min-width: 675px) {
   header h1 {
     padding-top: 35vh;
-    font-size: 3.5em; }
+    font-size: 3.5em;
+    font-weight: 300; }
   header h2 {
     font-size: 2em; }
   #scroll-tri {
@@ -774,7 +779,7 @@ footer {
   #wide-nav {
     height: 40px;
     background: #293135;
-    font-family: 'Raleway', sans-serif; }
+    font-family: "Raleway", sans-serif; }
     #wide-nav ul {
       position: absolute;
       top: 5px;
@@ -854,8 +859,6 @@ footer {
       width: 40%;
       margin: 3vw 0 0;
       padding: 0; }
-    .project .blog-figcaption p, .blogpost .blog-figcaption p {
-      text-indent: 25pt; }
   .blogpost {
     width: 60%;
     padding: 50px 20% 70px; }
@@ -873,9 +876,10 @@ footer {
       margin-bottom: 20px;
       text-align: left; }
     article p {
-      font-size: 14pt;
+      font-size: 16pt;
       padding-bottom: 15px;
-      margin-left: 15px; }
+      margin-left: 15px;
+      line-height: 1.5; }
     article .button {
       font-size: 1.2em;
       margin: 0; }
@@ -883,7 +887,6 @@ footer {
     width: 50%;
     margin: 50px auto; }
     .post-content p {
-      text-indent: 25pt;
       font-size: 14pt; }
     .post-content h1 {
       font-size: 36pt;
