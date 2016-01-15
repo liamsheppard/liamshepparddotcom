@@ -1,0 +1,28 @@
+/* ----------------------------------- */
+/* ------------ VARIABLES ------------ */
+/* ----------------------------------- */
+
+
+
+/* ------------- COLOURS ------------- */
+
+$drkgrn: #29a19c;
+$midgrn: #3fdaaf; //#63caad;
+$lgtgrn: #a3f6bf;
+$white:  #fcfcfc;
+$lgrey:  #dddddd;
+$dgrey:  #666666;
+$black:  #333333;
+
+
+/* ------------ TYPEFACES ------------ */
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,300,500);
+
+$raleway: 'Raleway', sans-serif;
+
+
+/* ----------- TRANSITIONS ----------- */
+
+$btn-trans-bezier: 1.000, 0.000, 0.000, 1.000;
+$btn-trans-len: 0.4s;

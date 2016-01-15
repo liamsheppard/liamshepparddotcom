@@ -1,0 +1,58 @@
+// Resetting default browser styles
+
+body,
+article,
+aside,
+details,
+figcaption,
+figure,
+header,
+footer,
+nav,
+hr,
+section,
+summary,
+div { 
+    margin: 0; 
+    padding: 0; 
+    border: 0;
+    display:block; 
+}
+
+body {
+	line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none; 
+	padding: 0;
+	margin: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.navlinks {
+    
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
