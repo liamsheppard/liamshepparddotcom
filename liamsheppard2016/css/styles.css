@@ -8,7 +8,6 @@
 /* ------------- COLOURS ------------- */
 /* ------------ TYPEFACES ------------ */
 @import url(https://fonts.googleapis.com/css?family=Raleway:100,300,500);
-@import url(https://fonts.googleapis.com/css?family=Quicksand:400,300);
 /* ----------- TRANSITIONS ----------- */
 body,
 article,
@@ -56,5 +55,18 @@ h6 {
 .clearfix {
   overflow: auto;
   zoom: 1; }
+
+/* ----------------------------------- */
+/* --------------- BODY -------------- */
+/* ----------------------------------- */
+/* --------------- BASE -------------- */
+/* ------------- SELECTION ----------- */
+::-moz-selection {
+  background: rgba(63, 218, 175, 0.99);
+  color: #fcfcfc; }
+
+::selection {
+  background: rgba(63, 218, 175, 0.99);
+  color: #fcfcfc; }
 
 /* -------------- MOBILE ------------- */

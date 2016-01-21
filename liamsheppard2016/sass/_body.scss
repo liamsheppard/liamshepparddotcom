@@ -1,0 +1,22 @@
+/* ----------------------------------- */
+/* --------------- BODY -------------- */
+/* ----------------------------------- */
+
+
+
+/* --------------- BASE -------------- */
+
+
+
+/* ------------- SELECTION ----------- */
+
+//Opacity is a workaround to ensure highlight is opaque.
+::-moz-selection {
+    background: rgba($midgrn, 0.99);
+    color: $white;
+}
+
+::selection {
+    background: rgba($midgrn, 0.99);
+    color: $white;
+}
