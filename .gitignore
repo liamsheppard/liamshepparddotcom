@@ -59,5 +59,11 @@ $RECYCLE.BIN/
 *.lnk
 
 
-### Illustrator ###
+### Illustrator/Photoshop ###
 *.ai
+*.psd
+
+### Folders ###
+/liamsheppard2016/resources/*
+/recordings/*
+/test/*

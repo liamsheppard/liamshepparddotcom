@@ -1,0 +1,30 @@
+/* ------------------------------------------------ */
+/*                                                  */
+/*                       BODY                       */
+/*                                                  */
+/* ------------------------------------------------ */
+
+
+
+/* ------------------------------------------------ */
+/*                       BASE                       */
+/* ------------------------------------------------ */
+body {
+    background: $ezra;
+}
+
+
+/* ------------------------------------------------ */
+/*                    SELECTION                     */
+/* ------------------------------------------------ */
+::-moz-selection {
+    //Opacity is a workaround to ensure highlight is opaque.
+    background: rgba($bloom, 0.99);
+    color: $apogee;
+}
+
+::selection {
+    //Opacity is a workaround to ensure highlight is opaque.
+    background: rgba($bloom, 0.99);
+    color: $apogee;
+}

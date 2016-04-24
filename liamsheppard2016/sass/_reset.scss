@@ -1,4 +1,8 @@
-// Resetting default browser styles
+/* ------------------------------------------------ */
+/*                                                  */
+/*                       RESET                      */
+/*                                                  */
+/* ------------------------------------------------ */
 
 body,
 article,
@@ -12,11 +16,11 @@ nav,
 hr,
 section,
 summary,
-div { 
-    margin: 0; 
-    padding: 0; 
+div {
+    margin: 0;
+    padding: 0;
     border: 0;
-    display:block; 
+    display:block;
 }
 
 body {
@@ -29,7 +33,7 @@ a {
 
 ul,
 ol {
-    list-style: none; 
+    list-style: none;
 	padding: 0;
 	margin: 0;
 }
@@ -39,7 +43,7 @@ table {
 	border-spacing: 0;
 }
 .navlinks {
-    
+
 }
 
 h1,
