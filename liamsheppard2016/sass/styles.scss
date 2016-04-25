@@ -16,12 +16,15 @@
 /* ------------------------------------------------ */
 @import '_variables.scss';
 @import '_reset.scss';
+@import '_temporary.scss';
 
 
 /* ------------------------------------------------ */
 /*                      MOBILE                      */
 /* ------------------------------------------------ */
 @import 'layout/_body.scss';
+@import 'layout/_header.scss';
+@import 'typography/_headings.scss';
 
 
 /* ------------------------------------------------ */

@@ -63,6 +63,9 @@ $RECYCLE.BIN/
 *.ai
 *.psd
 
+### gulpfile ###
+gulpfile.js
+
 ### Folders ###
 /liamsheppard2016/resources/*
 /recordings/*

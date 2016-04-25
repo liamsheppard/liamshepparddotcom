@@ -123,31 +123,26 @@
 .fa-rotate-90 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
   -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
   transform: rotate(90deg); }
 
 .fa-rotate-180 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
   transform: rotate(180deg); }
 
 .fa-rotate-270 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   -webkit-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
   transform: rotate(270deg); }
 
 .fa-flip-horizontal {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
   -webkit-transform: scale(-1, 1);
-  -ms-transform: scale(-1, 1);
   transform: scale(-1, 1); }
 
 .fa-flip-vertical {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -webkit-transform: scale(1, -1);
-  -ms-transform: scale(1, -1);
   transform: scale(1, -1); }
 
 :root .fa-rotate-90,
@@ -155,7 +150,8 @@
 :root .fa-rotate-270,
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical {
-  filter: none; }
+  -webkit-filter: none;
+          filter: none; }
 
 .fa-stack {
   position: relative;
@@ -2155,6 +2151,9 @@ h6 {
   overflow: auto;
   zoom: 1; }
 
+.navbar {
+  display: none; }
+
 /* ------------------------------------------------ */
 /*                      MOBILE                      */
 /* ------------------------------------------------ */
@@ -2167,7 +2166,9 @@ h6 {
 /*                       BASE                       */
 /* ------------------------------------------------ */
 body {
-  background: #5d63a4; }
+  background: #5d63a4;
+  font-family: "museo-sans",sans-serif;
+  color: #362b40; }
 
 /* ------------------------------------------------ */
 /*                    SELECTION                     */
@@ -2175,10 +2176,56 @@ body {
 ::-moz-selection {
   background: rgba(255, 115, 150, 0.99);
   color: #fcfcfc; }
-
 ::selection {
   background: rgba(255, 115, 150, 0.99);
   color: #fcfcfc; }
+
+/* ------------------------------------------------ */
+/*                                                  */
+/*                      HEADER                      */
+/*                                                  */
+/* ------------------------------------------------ */
+/* ------------------------------------------------ */
+/*                    HOME HEADER                   */
+/* ------------------------------------------------ */
+.home-header {
+  position: relative;
+  height: 85vh;
+  width: 100vw;
+  background: #ff7396;
+  color: #fcfcfc; }
+
+.header-content-wrapper {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%); }
+
+/* ------------------------------------------------ */
+/*                       LOGO                       */
+/* ------------------------------------------------ */
+.header-logo-white {
+  display: block;
+  margin: 0 auto 10px;
+  width: 80px;
+  height: auto;
+  fill: #fcfcfc; }
+
+/* ------------------------------------------------ */
+/*                  HEADING 2 (H2)                  */
+/* ------------------------------------------------ */
+.header-page-subtitle {
+  margin-top: 7px;
+  text-align: center;
+  font-size: 0.8em; }
+
+h1 {
+  font-family: "lato", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.7em; }
 
 /* ------------------------------------------------ */
 /*                      TABLET                      */

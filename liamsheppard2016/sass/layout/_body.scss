@@ -11,18 +11,13 @@
 /* ------------------------------------------------ */
 body {
     background: $ezra;
+    font-family: "museo-sans",sans-serif;
+    color: $desert-night;
 }
-
 
 /* ------------------------------------------------ */
 /*                    SELECTION                     */
 /* ------------------------------------------------ */
-::-moz-selection {
-    //Opacity is a workaround to ensure highlight is opaque.
-    background: rgba($bloom, 0.99);
-    color: $apogee;
-}
-
 ::selection {
     //Opacity is a workaround to ensure highlight is opaque.
     background: rgba($bloom, 0.99);

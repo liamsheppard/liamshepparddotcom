@@ -1,0 +1,46 @@
+/* ------------------------------------------------ */
+/*                                                  */
+/*                      HEADER                      */
+/*                                                  */
+/* ------------------------------------------------ */
+
+
+
+/* ------------------------------------------------ */
+/*                    HOME HEADER                   */
+/* ------------------------------------------------ */
+.home-header {
+    position: relative;
+    height: 85vh;
+    width: 100vw;
+    background: $bloom;
+    color: $apogee;
+}
+
+.header-content-wrapper {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translate(0, -50%);
+}
+
+
+/* ------------------------------------------------ */
+/*                       LOGO                       */
+/* ------------------------------------------------ */
+.header-logo-white {
+    display: block;
+    margin: 0 auto 10px;
+    width: 80px;
+    height: auto;
+    fill: $apogee;
+}
+
+/* ------------------------------------------------ */
+/*                  HEADING 2 (H2)                  */
+/* ------------------------------------------------ */
+.header-page-subtitle {
+    margin-top: 7px;
+    text-align: center;
+    font-size: 0.8em;
+}
