@@ -10,9 +10,12 @@
 /*                       BASE                       */
 /* ------------------------------------------------ */
 body {
-    background: $ezra;
-    font-family: "museo-sans",sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+    background: $apogee;
+    font-family: $museo;
     color: $desert-night;
+    font-weight: 100;
 }
 
 /* ------------------------------------------------ */

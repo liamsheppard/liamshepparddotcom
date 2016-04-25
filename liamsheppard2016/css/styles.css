@@ -2166,9 +2166,12 @@ h6 {
 /*                       BASE                       */
 /* ------------------------------------------------ */
 body {
-  background: #5d63a4;
-  font-family: "museo-sans",sans-serif;
-  color: #362b40; }
+  width: 100%;
+  overflow-x: hidden;
+  background: #fcfcfc;
+  font-family: "museo-sans", sans-serif;
+  color: #362b40;
+  font-weight: 100; }
 
 /* ------------------------------------------------ */
 /*                    SELECTION                     */
@@ -2190,7 +2193,7 @@ body {
 /* ------------------------------------------------ */
 .home-header {
   position: relative;
-  height: 85vh;
+  height: 80vh;
   width: 100vw;
   background: #ff7396;
   color: #fcfcfc; }
@@ -2202,13 +2205,90 @@ body {
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%); }
 
+.header-scroll-container {
+  display: block;
+  position: absolute;
+  bottom: 13px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 40px;
+  height: 30px;
+  color: #fcfcfc;
+  transition: color 0.2s; }
+  .header-scroll-container:hover {
+    color: #362b40; }
+
+.header-scroll-text {
+  display: block;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  font-weight: 100;
+  font-size: 0.8em;
+  -webkit-animation-name: scroll-animation-text;
+          animation-name: scroll-animation-text; }
+
+.header-scroll-icon {
+  display: block;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  font-size: 0.8em;
+  -webkit-animation-name: scroll-animation-icon;
+          animation-name: scroll-animation-icon; }
+
+.header-scroll-icon, .header-scroll-text {
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out; }
+
+@-webkit-keyframes scroll-animation-text {
+  0% {
+    opacity: 1;
+    bottom: 12px; }
+  100% {
+    opacity: 0.5;
+    bottom: 15px; } }
+
+@keyframes scroll-animation-text {
+  0% {
+    opacity: 1;
+    bottom: 12px; }
+  100% {
+    opacity: 0.5;
+    bottom: 15px; } }
+
+@-webkit-keyframes scroll-animation-icon {
+  0% {
+    opacity: 1;
+    bottom: 0px; }
+  100% {
+    opacity: 0.5;
+    bottom: 3px; } }
+
+@keyframes scroll-animation-icon {
+  0% {
+    opacity: 1;
+    bottom: 0px; }
+  100% {
+    opacity: 0.5;
+    bottom: 3px; } }
+
 /* ------------------------------------------------ */
 /*                       LOGO                       */
 /* ------------------------------------------------ */
 .header-logo-white {
   display: block;
   margin: 0 auto 10px;
-  width: 80px;
+  width: 70px;
   height: auto;
   fill: #fcfcfc; }
 
@@ -2218,7 +2298,8 @@ body {
 .header-page-subtitle {
   margin-top: 7px;
   text-align: center;
-  font-size: 0.8em; }
+  font-size: 0.9em;
+  font-weight: 100; }
 
 h1 {
   font-family: "lato", sans-serif;
@@ -2239,7 +2320,7 @@ h1 {
 /* ------------------------------------------------ */
 @media screen and (min-width: 1000px) {
   body {
-    background: #fcfcfc; } }
+    background: #5d63a4; } }
 
 /* ------------------------------------------------ */
 /*                     ULTRAWIDE                    */

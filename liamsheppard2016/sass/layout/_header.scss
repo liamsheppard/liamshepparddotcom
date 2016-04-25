@@ -11,7 +11,7 @@
 /* ------------------------------------------------ */
 .home-header {
     position: relative;
-    height: 85vh;
+    height: 80vh;
     width: 100vw;
     background: $bloom;
     color: $apogee;
@@ -24,6 +24,69 @@
         transform: translate(0, -50%);
 }
 
+.header-scroll-container {
+    display: block;
+    position: absolute;
+    bottom: 13px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 40px;
+    height: 30px;
+    color: $apogee;
+    transition: color 0.2s;
+    &:hover {
+        color: $desert-night;
+    }
+}
+
+.header-scroll-text {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-weight: 100;
+    font-size: 0.8em;
+    animation-name: scroll-animation-text;
+}
+
+.header-scroll-icon {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 0.8em;
+    animation-name: scroll-animation-icon;
+}
+
+.header-scroll-icon, .header-scroll-text {
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes scroll-animation-text {
+    0%   {
+        opacity: 1;
+        bottom: 12px;
+    }
+    100%  {
+        opacity: 0.5;
+        bottom: 15px;
+    }
+}
+
+@keyframes scroll-animation-icon {
+    0%   {
+        opacity: 1;
+        bottom: 0px;
+    }
+    100%  {
+        opacity: 0.5;
+        bottom: 3px;
+    }
+}
+
 
 /* ------------------------------------------------ */
 /*                       LOGO                       */
@@ -31,7 +94,7 @@
 .header-logo-white {
     display: block;
     margin: 0 auto 10px;
-    width: 80px;
+    width: 70px;
     height: auto;
     fill: $apogee;
 }
@@ -42,5 +105,6 @@
 .header-page-subtitle {
     margin-top: 7px;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 0.9em;
+    font-weight: 100;
 }
