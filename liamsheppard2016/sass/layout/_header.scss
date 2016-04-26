@@ -46,25 +46,20 @@
 }
 
 .header-scroll-text {
-    display: block;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
     font-weight: 100;
-    font-size: 0.8em;
     animation-name: scroll-animation-text;
 }
 
 .header-scroll-icon {
+    animation-name: scroll-animation-icon;
+}
+
+.header-scroll-icon, .header-scroll-text {
     display: block;
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
     font-size: 0.8em;
-    animation-name: scroll-animation-icon;
-}
-
-.header-scroll-icon, .header-scroll-text {
     animation-duration: 1.2s;
     animation-iteration-count: infinite;
     animation-direction: alternate;

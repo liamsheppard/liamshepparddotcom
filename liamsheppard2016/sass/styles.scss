@@ -30,6 +30,8 @@
 ------------------------------------------------------------------------------*/
 @media screen and (min-width: $bp-tablet) {
     @import 'layout/_body-tab.scss';
+    @import 'layout/_header-tab.scss';
+    @import 'typography/_headings-tab.scss';
 }
 
 
@@ -38,6 +40,8 @@
 ------------------------------------------------------------------------------*/
 @media screen and (min-width: $bp-wide) {
     @import 'layout/_body-wide.scss';
+    @import 'layout/_header-wide.scss';
+    @import 'typography/_headings-wide.scss';
 }
 
 
