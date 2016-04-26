@@ -1,0 +1,21 @@
+@keyframes scroll-animation-text {
+    0%   {
+        opacity: 1;
+        bottom: 12px;
+    }
+    100%  {
+        opacity: 0.5;
+        bottom: 15px;
+    }
+}
+
+@keyframes scroll-animation-icon {
+    0%   {
+        opacity: 1;
+        bottom: 0px;
+    }
+    100%  {
+        opacity: 0.5;
+        bottom: 3px;
+    }
+}

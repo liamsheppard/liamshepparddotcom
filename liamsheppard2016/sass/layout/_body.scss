@@ -9,20 +9,32 @@
 /* ------------------------------------------------ */
 /*                       BASE                       */
 /* ------------------------------------------------ */
+
+body,
+button,
+input,
+select,
+textarea {
+	color: $desert-night;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
 body {
     width: 100%;
     overflow-x: hidden;
     background: $apogee;
     font-family: $museo;
-    color: $desert-night;
     font-weight: 100;
 }
+
 
 /* ------------------------------------------------ */
 /*                    SELECTION                     */
 /* ------------------------------------------------ */
 ::selection {
     //Opacity is a workaround to ensure highlight is opaque.
-    background: rgba($bloom, 0.99);
+    background: rgba($desert-night, 0.99);
     color: $apogee;
 }

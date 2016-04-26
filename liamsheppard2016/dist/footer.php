@@ -1,14 +1,28 @@
-    <footer>
-        <div class='footer-content-wrapper'>
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
-            <i class="fa fa-github" aria-hidden="true"></i>
-            <a href='#' class='footerlink'>View Website Source</a>
-            <span class='footer-copyright'>© Liam Sheppard, 2016</span>
-        </div>
-    </footer>
-    <?php wp_footer(); ?>
-</body>
+<?php
+/**
+ * The template for displaying the footer.
+ *
+ * Contains the closing of the #content div and all content after.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package liamsheppard2016
+ */
 
+?>
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'liamsheppard2016' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'liamsheppard2016' ), 'WordPress' ); ?></a>
+			<span class="sep"> | </span>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'liamsheppard2016' ), 'liamsheppard2016', '<a href="http://liamsheppard.com" rel="designer">Liam Sheppard</a>' ); ?>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<?php wp_footer(); ?>
+
+</body>
 </html>
