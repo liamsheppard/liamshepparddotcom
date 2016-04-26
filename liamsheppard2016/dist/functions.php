@@ -28,14 +28,6 @@ function liamsheppard2016_setup() {
 	add_theme_support( 'automatic-feed-links' );
 
 	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
-	 */
-	add_theme_support( 'title-tag' );
-
-	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
@@ -108,7 +100,7 @@ add_action( 'widgets_init', 'liamsheppard2016_widgets_init' );
  * Enqueue scripts and styles.
  */
 function liamsheppard2016_scripts() {
-	wp_enqueue_style( 'liamsheppard2016-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'liamsheppard2016-style', get_template_directory_uri() . '/css/styles.min.css' );
 
 	wp_enqueue_script( 'liamsheppard2016-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -119,11 +111,6 @@ function liamsheppard2016_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'liamsheppard2016_scripts' );
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.

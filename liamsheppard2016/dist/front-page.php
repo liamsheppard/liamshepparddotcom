@@ -1,4 +1,13 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Front Page
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package liamsheppard2016
+ */
+
+get_header(); ?>
 
     <article>
     	<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
@@ -65,7 +74,6 @@
     	<!-- Twitter Scrolling Feed -->
     	<?php if ( is_active_sidebar( 'twitter-widget' ) ) : ?>
     		<div id='footer-twitter-widget' class='widget-area' role='complementary'>
-    			<img src='<?php bloginfo('stylesheet_directory'); ?>/img/twitter.svg' id='tweets-twitter'>
     			<?php dynamic_sidebar( 'twitter-widget' ); ?>
     		</div>
     	<?php endif; ?>
