@@ -25,17 +25,23 @@ o      o      o      o      o       o         o
 
 <head lang='en'>
 
-	<!-- PAGE TITLE -->
-	<?php
-		if ( is_front_page() ) { ?>
-			<title><?php bloginfo ('name'); ?></title>
-		<?php }
-		else if ( have_posts() ) {
-			while ( have_posts() ) {
-				the_post(); ?>
-				<title><?php the_title(); ?> | <?php bloginfo ('name'); ?></title>
-			<?php }
-		} ?>
+	<?php $blogtitle = get_bloginfo ('name'); ?>
+
+	<title>
+	<?php /* PAGE TITLE */
+	if ( is_front_page() ) {
+		echo $blogtitle;
+	} else if ( is_archive() ) {
+		$title = get_the_archive_title(); // This is also used for the header.
+		$title = str_replace("Category: ","",$title); // FORMAT TITLE
+		echo $title . ' | ' . $blogtitle;
+	} else if ( have_posts() ) {
+		while ( have_posts() ) {
+			the_post();
+			the_title('', ' | ' . $blogtitle);
+		}
+	} ?>
+	</title>
 
 	<meta charset='<?php bloginfo( 'charset' ); ?>'>
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
@@ -81,10 +87,8 @@ o      o      o      o      o       o         o
 					<?php
 					/* GET PAGE TITLE */
 					if ( is_front_page() ) { // IF HOMEPAGE
-						bloginfo('name');
+						echo $blogtitle;
 					} else if ( is_archive() ) { // IF ARCHIVE
-				  		$title = get_the_archive_title();
-				  		$title = str_replace("Category: ","",$title); // FORMAT TITLE
 						echo $title;
 					} else { // IF POST
 				        while ( have_posts() ) : the_post();
