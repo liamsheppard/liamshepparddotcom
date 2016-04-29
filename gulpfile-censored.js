@@ -12,7 +12,6 @@ gulp.task('default', function() {
     gulp.watch('./' + directory + '/sass/**/*.scss',['sass']);
     gulp.watch('./' + directory + '/css/**/*.css',['minify-css']);
     gulp.watch('./' + directory + '/dist/**',['deploy']);
-    gulp.watch('./' + directory + '/dist/*.php',['deploy']);
 });
 
 gulp.task('sass', function () {

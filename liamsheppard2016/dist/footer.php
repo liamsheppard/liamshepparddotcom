@@ -13,13 +13,18 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'liamsheppard2016' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'liamsheppard2016' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'liamsheppard2016' ), 'liamsheppard2016', '<a href="http://liamsheppard.com" rel="designer">Liam Sheppard</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	<footer id='colophon' class='page-footer'>
+        <div class='footer-content-wrapper'>
+			<ul class='footer-socialmedia'>
+	            <li><a href='' target='_blank' class='footer-socialmedia-link'><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+	            <li><a href='' target='_blank' class='footer-socialmedia-link'><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+	            <li><a href='' target='_blank' class='footer-socialmedia-link'><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+	            <li><a href='' target='_blank' class='footer-socialmedia-link'><i class="fa fa-github" aria-hidden="true"></i></a></li>
+			</ul>
+            <span class='footer-sourcecode'><a href='https://github.com/Liam-Sheppard/liamshepparddotcom'>View Source on GitHub</a></span>
+            <span class='footer-copyright'>© Liam Sheppard, 2016</span>
+        </div>
+    </footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

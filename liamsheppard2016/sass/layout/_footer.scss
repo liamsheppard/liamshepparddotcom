@@ -1,0 +1,74 @@
+/*==============================================================================
+# FOOTER
+==============================================================================*/
+
+/*------------------------------------------------------------------------------
+# STRIP
+------------------------------------------------------------------------------*/
+
+.page-footer {
+    width: 100%;
+    background: $desert-night;
+    color: $apogee;
+    font-size: 1em;
+}
+
+.page-footer a {
+    color: $apogee;
+}
+
+.footer-content-wrapper {
+    padding: 20px 0;
+}
+
+.footer-socialmedia li {
+    display: inline-block;
+    font-size: 1.5em;
+    margin: 0 5px;
+}
+
+.footer-socialmedia i {
+    transition: color 0.1s;
+
+    &:hover, &:active {
+        color: $bloom;
+    }
+}
+
+.footer-socialmedia {
+    cursor: default;
+}
+
+.footer-sourcecode,
+.footer-socialmedia,
+.footer-copyright {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-sourcecode a {
+    position: relative;
+    text-align: center;
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: $bloom;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.1s;
+    }
+
+    &:hover::after, &:active::after {
+        opacity: 1;
+    }
+}
+
+.footer-copyright {
+    color: $apollo;
+    opacity: 0.4;
+}
