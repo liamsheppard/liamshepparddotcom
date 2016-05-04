@@ -1,0 +1,37 @@
+/*=============================================================================
+# NAVIGATION
+==============================================================================*/
+
+
+/*------------------------------------------------------------------------------
+# MOBILE
+------------------------------------------------------------------------------*/
+.main-navigation {
+    display: block;
+    z-index: 500;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    background: $apogee;
+    transition: transform 0.4s cubic-bezier(0.72, 0, 0, 0.98);
+
+    & ul {
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+
+        & li {
+            display: inline-block;
+        }
+    }
+}
+
+.main-navigation.nav-hide {
+     transform: translate(0, -60px);
+ }
+
+.nav-item-home::before {
+    content: url(../img/icon-home.svg);
+    width: 80px;
+    height: 80px;
+}
