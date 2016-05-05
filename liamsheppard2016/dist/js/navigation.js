@@ -1,7 +1,9 @@
 jQuery( document ).ready( function( $ ) {
+
 	 var position,
 	     direction,
 		 previous;
+
 	$( window ).scroll( function( ) {
 
 		if ( position <= 20 ) {

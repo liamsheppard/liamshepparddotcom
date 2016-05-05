@@ -2,29 +2,21 @@
 # NAVIGATION
 ==============================================================================*/
 
+// Footer giving space for menu when scrolled all the way down.
+
 
 /*------------------------------------------------------------------------------
 # MOBILE
 ------------------------------------------------------------------------------*/
 .main-navigation {
     z-index: 500;
-    height: 60px;
+    height: 50px;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     background: $apogee;
     transition: transform 0.4s cubic-bezier(0.72, 0, 0, 0.98);
-
-    &::before {
-        position: absolute;
-        content: '';
-        height: 1px;
-        width: 100%;
-        top: -1px;
-        left: 0;
-        background: $apollo;
-    }
 
     & ul {
         display: flex;
@@ -35,19 +27,39 @@
     }
 }
 
+.current_page_item a::before,
+.main-navigation::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    left: 0;
+}
+
+.main-navigation::before {
+    height: 1px;
+    top: -1px;
+    background: $apollo;
+}
+
+.current_page_item a::before {
+    bottom: 0;
+    height: 1px;
+    background: $bloom;
+}
+
 .menu-item {
     display: block;
     text-align: center;
-    height: 60px;
+    height: 50px;
     width: 20%;
     position: relative;
 
     & a {
         display: block;
-        padding: 40px 0 20px;
+        padding: 29px 0 21px;
         width: 100%;
         height: 100%;
-        font-size: 85%;
+        font-size: 90%;
         z-index: 600;
         color: $apollo-dark;
 
@@ -65,14 +77,94 @@
      transform: translate(0, 60px);
  }
 
-.nav-item-home::before {
+/*------------------------------------------------------------------------------
+# SPRITES FOR MOBILE MENU
+------------------------------------------------------------------------------*/
+
+.menu-item::before {
+    background-image: url(../img/menusprites.png);
     z-index: -1;
     content: '';
     position: absolute;
-    background: $bloom;
-    width: 35px;
-    height: 35px;
-    top: 5px;
+    width: 25px;
+    height: 25px;
+    top: 3px;
     left: 50%;
     transform: translate(-50%,0);
+    background-size: 50px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 240dpi) {
+.menu-item::before {
+        background-image: url(../img/menusprites@2x.png);
+    }
+}
+
+/*------------------------------------------------------------------------------
+# HOME
+------------------------------------------------------------------------------*/
+.nav-item-home:hover::before,
+.nav-item-home.current_page_item::before {
+    background-position: 0 0;
+}
+
+.nav-item-home::before {
+    background-position: 25px 0;
+}
+
+/*------------------------------------------------------------------------------
+# WORK
+------------------------------------------------------------------------------*/
+.nav-item-work:hover::before,
+.nav-item-work.current_page_item::before {
+    background-position: 0 -25px;
+}
+
+.nav-item-work::before {
+    background-position: -25px -25px;
+}
+
+/*------------------------------------------------------------------------------
+# BLOG
+------------------------------------------------------------------------------*/
+.nav-item-blog:hover::before,
+.nav-item-blog.current_page_item::before {
+    background-position: 0 -50px;
+}
+
+.nav-item-blog::before {
+    background-position: -25px -50px;
+}
+
+/*------------------------------------------------------------------------------
+# ABOUT
+------------------------------------------------------------------------------*/
+.nav-item-about:hover::before,
+.nav-item-about.current_page_item::before {
+    background-position: 0 -75px;
+}
+
+.nav-item-about::before {
+    background-position: -25px -75px;
+}
+
+/*------------------------------------------------------------------------------
+# CONTACT
+------------------------------------------------------------------------------*/
+.nav-item-contact::before {
+    background-position: 0 -100px;
+}
+
+.nav-item-contact a {
+    color: $ezra;
+}
+
+.nav-item-contact a:hover {
+    color: $ezra;
+}
+
+.nav-item-contact.current_page_item a::before {
+    background: $ezra;
 }

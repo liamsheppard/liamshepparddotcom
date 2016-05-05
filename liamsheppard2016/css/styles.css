@@ -2784,7 +2784,7 @@ body {
 ------------------------------------------------------------------------------*/
 .main-navigation {
   z-index: 500;
-  height: 60px;
+  height: 50px;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -2793,14 +2793,6 @@ body {
   transition: -webkit-transform 0.4s cubic-bezier(0.72, 0, 0, 0.98);
   transition: transform 0.4s cubic-bezier(0.72, 0, 0, 0.98);
   transition: transform 0.4s cubic-bezier(0.72, 0, 0, 0.98), -webkit-transform 0.4s cubic-bezier(0.72, 0, 0, 0.98); }
-  .main-navigation::before {
-    position: absolute;
-    content: '';
-    height: 1px;
-    width: 100%;
-    top: -1px;
-    left: 0;
-    background: #c1cad6; }
   .main-navigation ul {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2812,18 +2804,35 @@ body {
     margin: 0;
     padding-left: 0; }
 
+.current_page_item a::before,
+.main-navigation::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  left: 0; }
+
+.main-navigation::before {
+  height: 1px;
+  top: -1px;
+  background: #c1cad6; }
+
+.current_page_item a::before {
+  bottom: 0;
+  height: 1px;
+  background: #ff7396; }
+
 .menu-item {
   display: block;
   text-align: center;
-  height: 60px;
+  height: 50px;
   width: 20%;
   position: relative; }
   .menu-item a {
     display: block;
-    padding: 40px 0 20px;
+    padding: 29px 0 21px;
     width: 100%;
     height: 100%;
-    font-size: 85%;
+    font-size: 90%;
     z-index: 600;
     color: #909aa6; }
     .menu-item a:hover {
@@ -2836,17 +2845,80 @@ body {
   -webkit-transform: translate(0, 60px);
           transform: translate(0, 60px); }
 
-.nav-item-home::before {
+/*------------------------------------------------------------------------------
+# SPRITES FOR MOBILE MENU
+------------------------------------------------------------------------------*/
+.menu-item::before {
+  background-image: url(../img/menusprites.png);
   z-index: -1;
   content: '';
   position: absolute;
-  background: #ff7396;
-  width: 35px;
-  height: 35px;
-  top: 5px;
+  width: 25px;
+  height: 25px;
+  top: 3px;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0); }
+          transform: translate(-50%, 0);
+  background-size: 50px; }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2.5), only screen and (min-resolution: 240dpi) {
+  .menu-item::before {
+    background-image: url(../img/menusprites@2x.png); } }
+
+/*------------------------------------------------------------------------------
+# HOME
+------------------------------------------------------------------------------*/
+.nav-item-home:hover::before,
+.nav-item-home.current_page_item::before {
+  background-position: 0 0; }
+
+.nav-item-home::before {
+  background-position: 25px 0; }
+
+/*------------------------------------------------------------------------------
+# WORK
+------------------------------------------------------------------------------*/
+.nav-item-work:hover::before,
+.nav-item-work.current_page_item::before {
+  background-position: 0 -25px; }
+
+.nav-item-work::before {
+  background-position: -25px -25px; }
+
+/*------------------------------------------------------------------------------
+# BLOG
+------------------------------------------------------------------------------*/
+.nav-item-blog:hover::before,
+.nav-item-blog.current_page_item::before {
+  background-position: 0 -50px; }
+
+.nav-item-blog::before {
+  background-position: -25px -50px; }
+
+/*------------------------------------------------------------------------------
+# ABOUT
+------------------------------------------------------------------------------*/
+.nav-item-about:hover::before,
+.nav-item-about.current_page_item::before {
+  background-position: 0 -75px; }
+
+.nav-item-about::before {
+  background-position: -25px -75px; }
+
+/*------------------------------------------------------------------------------
+# CONTACT
+------------------------------------------------------------------------------*/
+.nav-item-contact::before {
+  background-position: 0 -100px; }
+
+.nav-item-contact a {
+  color: #4b61a6; }
+
+.nav-item-contact a:hover {
+  color: #4b61a6; }
+
+.nav-item-contact.current_page_item a::before {
+  background: #4b61a6; }
 
 /*==============================================================================
 # HEADER
@@ -2859,8 +2931,7 @@ body {
   background: #ff7396;
   color: #fcfcfc;
   width: 100%;
-  z-index: 5;
-  padding-top: 60px; }
+  z-index: 5; }
 
 .page-header {
   height: 35vh; }
@@ -2869,7 +2940,7 @@ body {
 # HOME HEADER
 ------------------------------------------------------------------------------*/
 .home-header {
-  height: 80vh; }
+  height: 75vh; }
 
 .header-content-wrapper {
   position: absolute;
@@ -2954,6 +3025,9 @@ body {
 .footer-content-wrapper {
   padding: 20px 0; }
 
+/*------------------------------------------------------------------------------
+# SOCIAL MEDIA
+------------------------------------------------------------------------------*/
 .footer-socialmedia li {
   display: inline-block;
   font-size: 1.5em;
@@ -2974,6 +3048,9 @@ body {
   margin: 0 auto;
   text-align: center; }
 
+/*------------------------------------------------------------------------------
+# LINK
+------------------------------------------------------------------------------*/
 .footer-sourcecode a {
   position: relative;
   text-align: center; }
@@ -2990,6 +3067,9 @@ body {
   .footer-sourcecode a:hover::after, .footer-sourcecode a:active::after {
     opacity: 1; }
 
+/*------------------------------------------------------------------------------
+# COPYRIGHT
+------------------------------------------------------------------------------*/
 .footer-copyright {
   color: #c1cad6;
   opacity: 0.4; }
@@ -3016,8 +3096,6 @@ h1 {
 # TABLET
 ------------------------------------------------------------------------------*/
 @media screen and (min-width: 600px) {
-  body {
-    background: #c1cad6; }
   /*==============================================================================
 # HEADER TABLET
 ==============================================================================*/
@@ -3041,11 +3119,11 @@ h1 {
 # WIDE
 ------------------------------------------------------------------------------*/
 @media screen and (min-width: 1000px) {
-  body {
-    background: #4b61a6; }
   /*==============================================================================
 # HEADER WIDE
 ==============================================================================*/
+  .site-header {
+    padding-top: 60px; }
   /*------------------------------------------------------------------------------
 # SUBTITLE
 ------------------------------------------------------------------------------*/
