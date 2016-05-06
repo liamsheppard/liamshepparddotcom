@@ -6,7 +6,7 @@ jQuery( document ).ready( function( $ ) {
 
 	$( window ).scroll( function( ) {
 
-		if ( position <= 20 ) {
+		if ( position <= 60 ) {
 			$( '.main-navigation' ).removeClass( 'nav-hide' );
 		} else if ( $( this ).scrollTop( ) >= position ) {
 			direction = 'down';

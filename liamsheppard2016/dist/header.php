@@ -43,6 +43,10 @@ o      o      o      o      o       o         o
 	} ?>
 	</title>
 
+	<!-- TYPEFACES -->
+	<script src="https://use.typekit.net/pks4irj.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
 	<meta charset='<?php bloginfo( 'charset' ); ?>'>
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 	<link rel='profile' href='http://gmpg.org/xfn/11'>
@@ -71,12 +75,9 @@ o      o      o      o      o       o         o
 
 	<!-- NAVIGATION -->
 	<nav id="site-navigation" class="main-navigation" role="navigation">
+		<a href='/' class='nav-logo-link'><svg class='nav-logo-bloom' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250.76 68.69"><title>logo-bloom</title><path d="M231,41.17H210.46a22.09,22.09,0,0,0-20.24,13.23,19.1,19.1,0,0,1-34.85,0,22.09,22.09,0,0,0-20.24-13.23,22.46,22.46,0,0,0-20.27,13.23,19.13,19.13,0,0,1-34.89,0A22.09,22.09,0,0,0,67.71,42.67a22.08,22.08,0,1,0-16,0A22.09,22.09,0,0,0,39.5,54.42h0A19.12,19.12,0,0,1,17.14,65.05,19.36,19.36,0,0,1,3,46.2V1.5A1.5,1.5,0,0,0,1.5,0h0A1.5,1.5,0,0,0,0,1.5V46.19A22.38,22.38,0,0,0,16.57,68,22.13,22.13,0,0,0,42.25,55.63a19.09,19.09,0,0,1,35,0,22.12,22.12,0,0,0,40.3.15,19.39,19.39,0,0,1,17.6-11.6,19.09,19.09,0,0,1,17.49,11.44,22.09,22.09,0,0,0,40.32,0,19.1,19.1,0,0,1,17.51-11.46H231a19.1,19.1,0,0,1,16.9,10.21,1.49,1.49,0,0,0,1.91.66h0a1.51,1.51,0,0,0,.73-2.08A22.1,22.1,0,0,0,231,41.17Zm-169.33-.1A19.09,19.09,0,1,1,78.72,24,19.11,19.11,0,0,1,61.72,41.07Z"/></svg></a>
 		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 	</nav><!-- #site-navigation -->
-
-    <!-- TYPEFACES -->
-    <script src="https://use.typekit.net/pks4irj.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 	<!-- FRONT PAGE HEADER -->
         <header id='masthead' class='site-header <?php if ( is_front_page() ) { ?>home<?php } else { ?>page<?php } ?>-header' role='banner'>

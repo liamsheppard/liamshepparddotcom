@@ -42,6 +42,7 @@
 ------------------------------------------------------------------------------*/
 @media screen and (min-width: $bp-wide) {
     @import 'layout/_body-wide.scss';
+    @import 'layout/_navigation-wide.scss';
     @import 'layout/_header-wide.scss';
     @import 'typography/_headings-wide.scss';
 }

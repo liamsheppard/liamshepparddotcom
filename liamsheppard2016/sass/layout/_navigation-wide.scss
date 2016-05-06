@@ -1,0 +1,123 @@
+/*=============================================================================
+# NAVIGATION
+==============================================================================*/
+
+/*------------------------------------------------------------------------------
+# POSITION
+------------------------------------------------------------------------------*/
+// Add padding to top of site header for the menu.
+.site-header {
+    padding-top: $wide-nav-height;
+}
+
+.main-navigation {
+    background: darken($apogee, 1%);
+    top: 0;
+    height: $wide-nav-height;
+
+    & ul {
+        width: 450px;
+        right: 130px;
+        position: absolute;
+    }
+}
+
+
+/*------------------------------------------------------------------------------
+# MENU LOGO
+------------------------------------------------------------------------------*/
+.nav-logo-link {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 90px;
+    padding: 0 20px 0 22px;
+    height: $wide-nav-height;
+    transition: fill 0.1s, background 0.1s;
+
+    &:hover {
+        background: $bloom;
+
+        & .nav-logo-bloom {
+            fill: $apogee;
+        }
+    }
+}
+
+.nav-logo-bloom {
+    height: 1.2em;
+    width: auto;
+    fill: $bloom;
+    margin: 20px 0;
+}
+
+
+/*------------------------------------------------------------------------------
+# ITEMS
+------------------------------------------------------------------------------*/
+.menu-item {
+    height: $wide-nav-height;
+}
+
+
+/*------------------------------------------------------------------------------
+# CONTACT
+------------------------------------------------------------------------------*/
+.menu-item a {
+    color: $apollo-dark;
+    font-size: 1em;
+    padding: 0;
+    line-height: $wide-nav-height;
+
+    &:hover {
+        background: $apollo-light;
+        color: $bloom;
+    }
+}
+
+
+/*------------------------------------------------------------------------------
+# CURRENT PAGE
+------------------------------------------------------------------------------*/
+.current_page_item a {
+    background: $bloom;
+    color: $apogee;
+
+    &:hover {
+        color: $apogee; // Override mobile style
+        background: darken( $bloom, 3% );
+    }
+}
+
+.current_page_item a::before {
+    content: none;
+}
+
+
+/*------------------------------------------------------------------------------
+# CONTACT
+------------------------------------------------------------------------------*/
+.nav-item-contact a {
+    color: $apogee;
+    background: $ezra;
+
+    &:hover {
+        color: $apogee; // Override mobile style
+        background: darken( $ezra, 3% );
+    }
+}
+
+/*------------------------------------------------------------------------------
+# MENU HIDE
+------------------------------------------------------------------------------*/
+.main-navigation.nav-hide {
+     transform: translate(0, -$wide-nav-height);
+ }
+
+
+ /*-----------------------------------------------------------------------------
+ # REMOVE ICONS
+ -----------------------------------------------------------------------------*/
+.menu-item::before {
+    content: none;
+}
