@@ -1,13 +1,13 @@
 <?php
 /**
- * liamsheppard2016 functions and definitions.
+ * ls2016 functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package liamsheppard2016
+ * @package ls2016
  */
 
-if ( ! function_exists( 'liamsheppard2016_setup' ) ) :
+if ( ! function_exists( 'ls2016_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -15,14 +15,14 @@ if ( ! function_exists( 'liamsheppard2016_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function liamsheppard2016_setup() {
+function ls2016_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on liamsheppard2016, use a find and replace
-	 * to change 'liamsheppard2016' to the name of your theme in all the template files.
+	 * If you're building a theme based on ls2016, use a find and replace
+	 * to change 'ls2016' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'liamsheppard2016', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'ls2016', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -36,7 +36,7 @@ function liamsheppard2016_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'liamsheppard2016' ),
+		'primary' => esc_html__( 'Primary', 'ls2016' ),
 	) );
 
 	/*
@@ -62,9 +62,16 @@ function liamsheppard2016_setup() {
 		'quote',
 		'link',
 	) );
+
+	add_theme_support( 'featured-content', array(
+    	'filter' => 'ls2016_get_featured_content',
+		'max_posts' => 5,
+	) );
+
+
 }
 endif;
-add_action( 'after_setup_theme', 'liamsheppard2016_setup' );
+add_action( 'after_setup_theme', 'ls2016_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -73,28 +80,28 @@ add_action( 'after_setup_theme', 'liamsheppard2016_setup' );
  *
  * @global int $content_width
  */
-function liamsheppard2016_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'liamsheppard2016_content_width', 1100 );
+function ls2016_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'ls2016_content_width', 1100 );
 }
-add_action( 'after_setup_theme', 'liamsheppard2016_content_width', 0 );
+add_action( 'after_setup_theme', 'ls2016_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function liamsheppard2016_widgets_init() {
+function ls2016_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'liamsheppard2016' ),
+		'name'          => esc_html__( 'Sidebar', 'ls2016' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'liamsheppard2016' ),
+		'description'   => esc_html__( 'Add widgets here.', 'ls2016' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'liamsheppard2016_widgets_init' );
+add_action( 'widgets_init', 'ls2016_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
@@ -134,3 +141,26 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Add Featured Content for Front Page
+ */
+ function ls2016_get_featured_content() {
+     return apply_filters( 'ls2016_get_featured_content', array() );
+ }
+
+ function ls2016_has_featured_posts( $minimum = 1 ) {
+    if ( is_paged() )
+        return false;
+
+    $minimum = absint( $minimum );
+    $featured_posts = apply_filters( 'ls2016_get_featured_posts', array() );
+
+    if ( ! is_array( $featured_posts ) )
+        return false;
+
+    if ( $minimum > count( $featured_posts ) )
+        return false;
+
+    return true;
+}
