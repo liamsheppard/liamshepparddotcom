@@ -68,6 +68,7 @@
     font-size: 1em;
     padding: 0;
     line-height: $wide-nav-height;
+    text-transform: none;
 
     &:hover {
         background: $apollo-light;

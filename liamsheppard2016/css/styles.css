@@ -2795,7 +2795,7 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #fcfcfc;
+  background: #f6f5f7;
   transition: -webkit-transform 0.4s cubic-bezier(0.72, 0, 0, 0.98);
   transition: transform 0.4s cubic-bezier(0.72, 0, 0, 0.98);
   transition: transform 0.4s cubic-bezier(0.72, 0, 0, 0.98), -webkit-transform 0.4s cubic-bezier(0.72, 0, 0, 0.98); }
@@ -2809,23 +2809,6 @@ body {
     list-style: none;
     margin: 0;
     padding-left: 0; }
-
-.current_page_item a::before,
-.main-navigation::before {
-  position: absolute;
-  content: '';
-  width: 100%;
-  left: 0; }
-
-.main-navigation::before {
-  height: 1px;
-  top: -1px;
-  background: #c1cad6; }
-
-.current_page_item a::before {
-  bottom: 0;
-  height: 1px;
-  background: #ff7396; }
 
 .menu-item {
   display: block;
@@ -2842,11 +2825,10 @@ body {
     z-index: 600;
     color: #909aa6;
     transition: color 0.1s, background 0.1s; }
-    .menu-item a:hover {
-      color: #ff7396; }
 
 .current_page_item a {
-  color: #ff7396; }
+  color: #fcfcfc;
+  background: #ff7396; }
 
 /*------------------------------------------------------------------------------
 # MENU HIDE
@@ -2877,6 +2859,9 @@ body {
           transform: translate(-50%, 0);
   background-size: 50px; }
 
+.menu-item.current_page_item::before {
+  z-index: 1; }
+
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2.5), only screen and (min-resolution: 240dpi) {
   .menu-item::before {
     background-image: url(../img/menusprites@2x.png); } }
@@ -2884,7 +2869,6 @@ body {
 /*------------------------------------------------------------------------------
 # HOME
 ------------------------------------------------------------------------------*/
-.nav-item-home:hover::before,
 .nav-item-home.current_page_item::before {
   background-position: 0 0; }
 
@@ -2894,7 +2878,6 @@ body {
 /*------------------------------------------------------------------------------
 # WORK
 ------------------------------------------------------------------------------*/
-.nav-item-work:hover::before,
 .nav-item-work.current_page_item::before {
   background-position: 0 -25px; }
 
@@ -2904,7 +2887,6 @@ body {
 /*------------------------------------------------------------------------------
 # BLOG
 ------------------------------------------------------------------------------*/
-.nav-item-blog:hover::before,
 .nav-item-blog.current_page_item::before {
   background-position: 0 -50px; }
 
@@ -2914,7 +2896,6 @@ body {
 /*------------------------------------------------------------------------------
 # ABOUT
 ------------------------------------------------------------------------------*/
-.nav-item-about:hover::before,
 .nav-item-about.current_page_item::before {
   background-position: 0 -75px; }
 
@@ -2925,16 +2906,17 @@ body {
 # CONTACT
 ------------------------------------------------------------------------------*/
 .nav-item-contact::before {
+  background-position: 25px -100px; }
+
+.nav-item-contact.current_page_item::before {
   background-position: 0 -100px; }
 
 .nav-item-contact a {
   color: #5d63a4; }
 
-.nav-item-contact a:hover {
-  color: #5d63a4; }
-
-.nav-item-contact.current_page_item a::before {
-  background: #5d63a4; }
+.nav-item-contact.current_page_item a {
+  background: #5d63a4;
+  color: #fcfcfc; }
 
 /*==============================================================================
 # HEADER
@@ -3183,7 +3165,8 @@ h1 {
     color: #909aa6;
     font-size: 1em;
     padding: 0;
-    line-height: 60px; }
+    line-height: 60px;
+    text-transform: none; }
     .menu-item a:hover {
       background: #f6f5f7;
       color: #ff7396; }
@@ -3276,3 +3259,15 @@ h1 {
   100% {
     opacity: 0.5;
     bottom: 3px; } }
+
+/*------------------------------------------------------------------------------
+# SHAME
+------------------------------------------------------------------------------*/
+/*==============================================================================
+# SHAME
+==============================================================================*/
+/**
+ * This file is for hacky or rushed changes to SCSS.
+ */
+#infinite-footer {
+  display: none; }

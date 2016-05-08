@@ -11,29 +11,29 @@
 /*------------------------------------------------------------------------------
 # BASE
 ------------------------------------------------------------------------------*/
-@import '_variables.scss';
-@import '_reset.scss';
-@import '_underscores.scss';
-@import '_temporary.scss';
+@import '_variables';
+@import '_reset';
+@import '_underscores';
+@import '_temporary';
 
 
 /*------------------------------------------------------------------------------
 # MOBILE
 ------------------------------------------------------------------------------*/
-@import 'layout/_body.scss';
-@import 'layout/_navigation.scss';
-@import 'layout/_header.scss';
-@import 'layout/_footer.scss';
-@import 'typography/_headings.scss';
+@import 'layout/_body';
+@import 'layout/_navigation';
+@import 'layout/_header';
+@import 'layout/_footer';
+@import 'typography/_headings';
 
 
 /*------------------------------------------------------------------------------
 # TABLET
 ------------------------------------------------------------------------------*/
 @media screen and (min-width: $bp-tablet) {
-    @import 'layout/_body-tab.scss';
-    @import 'layout/_header-tab.scss';
-    @import 'typography/_headings-tab.scss';
+    @import 'layout/_body-tab';
+    @import 'layout/_header-tab';
+    @import 'typography/_headings-tab';
 }
 
 
@@ -41,14 +41,20 @@
 # WIDE
 ------------------------------------------------------------------------------*/
 @media screen and (min-width: $bp-wide) {
-    @import 'layout/_body-wide.scss';
-    @import 'layout/_navigation-wide.scss';
-    @import 'layout/_header-wide.scss';
-    @import 'typography/_headings-wide.scss';
+    @import 'layout/_body-wide';
+    @import 'layout/_navigation-wide';
+    @import 'layout/_header-wide';
+    @import 'typography/_headings-wide';
 }
 
 
 /*------------------------------------------------------------------------------
 # ANIMATIONS
 ------------------------------------------------------------------------------*/
-@import 'misc/_animations.scss';
+@import 'misc/_animations';
+
+
+/*------------------------------------------------------------------------------
+# SHAME
+------------------------------------------------------------------------------*/
+@import '_shame';

@@ -2,9 +2,12 @@ jQuery( document ).ready( function( $ ) {
 
 	 var position,
 	     direction,
-		 previous;
+		 previous,
+		 scrollBottom;
 
 	$( window ).scroll( function( ) {
+
+		scrollBottom = $( this ).scrollTop() + $( this ).height( );
 
 		if ( position <= 60 ) {
 			$( '.main-navigation' ).removeClass( 'nav-hide' );
