@@ -31,6 +31,6 @@ body {
 ------------------------------------------------------------------------------*/
 ::selection {
     //Opacity is a workaround to ensure highlight is opaque.
-    background: rgba($desert-night, 0.99);
+    background: rgba(darken( $desert-night, 1% ), 0.99);
     color: $apogee;
 }
