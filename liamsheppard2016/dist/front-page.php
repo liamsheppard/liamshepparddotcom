@@ -11,26 +11,25 @@ get_header(); ?>
 
     <article>
         <h2>Featured Work</h2>
-        <span class='home-subtitle'>Projects & Case Studies</span>
+        <span class='home-heading-subtitle'>Projects & Case Studies</span>
 
-    	<?php query_posts( array ( ls2016_get_featured_content() ) );
-    	if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <div class=''>
-            <figure class='home-work-image-wrapper'>
-                <?php if ( has_post_thumbnail() ) {
-    				the_post_thumbnail();
-    			}; ?>
-            </figure>
+    	<?php
+        $featured_work = ls2016_get_featured_content();
+        foreach ( $featured_work as $post ) : setup_postdat;
+                //the_post();
+                include("project.php");
+        endforeach ?>
 
-            <div class='home-summary home-work-summary'>
-                <h4><?php the_title(); ?></h4>
-                <?php the_excerpt(); ?>
-    			<a href='<?php the_permalink() ?>' class='button projectlink button-right'><span class='button-fill button-fill-right'></span><?php echo get_post_meta($post->ID, 'button_tagline', true); ?></a>
-            </div>
-        </div>
-    	<hr class='divider'>
-    	<?php endwhile; ?>
-    	<?php endif; ?>
+
+        <?php /*
+        query_posts( array ( ls2016_get_featured_content() ) );
+    	if ( have_posts() ) {
+            while ( have_posts() ) {
+                the_post();
+                $featured_title = the_title();
+                include("project.php");
+            }
+        } */ ?>
 
     	<div class='more-button'>
     		<a href='<?php get_site_url(); ?>/projects' class='button button-down'><span class='button-fill button-fill-down'></span>More Projects</a>

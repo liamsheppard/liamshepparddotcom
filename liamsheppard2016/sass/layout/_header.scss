@@ -14,8 +14,9 @@
 }
 
 .page-header {
-    height: 35vh;
+    height: 40vh;
 }
+
 
 /*------------------------------------------------------------------------------
 # HOME HEADER
@@ -25,10 +26,11 @@
 }
 
 .header-content-wrapper {
-        position: absolute;
-        width: 100%;
-        top: 50%;
-        transform: translate(0, -50%);
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    padding-top: $mobile-nav-height;
+    transform: translate(0, -50%);
 }
 
 .header-scroll-container {
@@ -67,6 +69,7 @@
     animation-timing-function: ease-in-out;
 }
 
+
 /*------------------------------------------------------------------------------
 # LOGO
 ------------------------------------------------------------------------------*/
@@ -78,6 +81,7 @@
     fill: $apogee;
 }
 
+
 /*------------------------------------------------------------------------------
 # SUBTITLE
 ------------------------------------------------------------------------------*/
@@ -86,4 +90,7 @@
     text-align: center;
     font-size: 0.9em;
     font-weight: 100;
+    color: $apogee;
+    font-family: $museo;
+    text-transform: none;
 }

@@ -1,0 +1,75 @@
+/*=============================================================================
+# PROJECTS AND POSTS
+==============================================================================*/
+
+/*------------------------------------------------------------------------------
+# PROJECT
+------------------------------------------------------------------------------*/
+.project-post {
+    box-sizing: border-box;
+    background: $apollo-light;
+    width: 90%;
+    margin: 25px auto;
+
+    figure {
+        margin: 0;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .project-post-summary {
+        padding: 10px 20px 15px;
+        text-align: center;
+    }
+
+    .btn {
+        // REMOVE IF NOTHING ADDED
+    }
+
+    p {
+        text-align: left;
+        margin: 15px 10px 20px;
+        font-size: 0.9em;
+    }
+
+    h3 {
+        color: $bloom;
+        font-size: 1.4em;
+    }
+}
+
+.post-tags {
+    color: $apollo;
+    font-size: 0.9em;
+    transition: color 0.1s, opacity 0.1s;
+
+    a {
+        position: relative;
+        color: $apollo;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 1px;
+            left: 0;
+            height: 1px;
+            width: 100%;
+            opacity: 0;
+            background: $bloom;
+        }
+
+        &:hover,
+        &:active {
+            color: $bloom;
+
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}

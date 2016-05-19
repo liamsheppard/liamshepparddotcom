@@ -1,0 +1,68 @@
+/*=============================================================================
+# BUTTONS
+==============================================================================*/
+
+/*------------------------------------------------------------------------------
+# BASIC BUTTON AND COLOURS
+------------------------------------------------------------------------------*/
+.btn {
+    display: inline-block;
+    padding: 5px 20px;
+    border: 1px solid;
+    transition: color 0.1s, background 0.1s;
+}
+
+.btn-bloom {
+    border-color: $bloom;
+    color: $bloom;
+
+    &:active,
+    &:hover {
+        color: $apogee;
+        background: $bloom;
+    }
+}
+
+.btn-ezra {
+    border-color: $ezra;
+    color: $ezra;
+
+    &:active,
+    &:hover {
+        color: $apogee;
+        background: $ezra;
+    }
+}
+
+.btn-apogee {
+    border-color: $apogee;
+    color: $apogee;
+
+    &:active,
+    &:hover {
+        color: $desert-night;
+        background: $apogee;
+    }
+}
+
+.btn-apollo {
+    border-color: $apollo;
+    color: $apollo;
+
+    &:active,
+    &:hover {
+        color: $apogee;
+        background: $apollo;
+    }
+}
+
+.btn-desert-night {
+    border-color: $desert-night;
+    color: $desert-night;
+
+    &:active,
+    &:hover {
+        color: $apogee;
+        background: $desert-night;
+    }
+}

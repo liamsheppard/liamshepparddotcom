@@ -12,7 +12,6 @@
 
 .main-navigation {
     background: darken($apogee, 1%);
-    top: 0;
     height: $wide-nav-height;
 
     & ul {
@@ -36,10 +35,10 @@
     transition: fill 0.1s, background 0.1s;
 
     &:hover {
-        background: $bloom;
+        background: $apollo-light;
 
         & .nav-logo-bloom {
-            fill: $apogee;
+            fill: darken( $bloom, 3% );
         }
     }
 }

@@ -7,9 +7,9 @@
 ------------------------------------------------------------------------------*/
 .main-navigation {
     z-index: 500;
-    height: 50px;
+    height: $mobile-nav-height;
     position: fixed;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
     background: $apollo-light;
@@ -53,7 +53,7 @@
 # MENU HIDE
 ------------------------------------------------------------------------------*/
 .main-navigation.nav-hide {
-     transform: translate(0, 50px);
+     transform: translate(0, -$mobile-nav-height);
  }
 
 

@@ -71,7 +71,8 @@
         transition: opacity 0.1s;
     }
 
-    &:hover::after, &:active::after {
+    &:hover::after,
+    &:active::after {
         opacity: 1;
     }
 }

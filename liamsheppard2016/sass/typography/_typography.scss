@@ -13,20 +13,29 @@ h5,
 h6 {
     clear: both;
     font-family: $lato;
+	text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
 }
 
 h1 {
-    font-family: $lato;
-    font-weight: 900;
-    text-transform: uppercase;
-    text-align: center;
     font-size: 1.7em;
 }
 
 h2 {
-	text-transform: uppercase;
 	color: $bloom;
 	font-size: 1.6em;
+    margin: 20px 0 3px;
+}
+
+
+/*------------------------------------------------------------------------------
+# SPECIFIC STYLING
+------------------------------------------------------------------------------*/
+.home-heading-subtitle {
     text-align: center;
-    margin: 20px 0 10px;
+    font-size: 0.9em;
+    display: block;
+    color: $bloom;
+    margin: 0;
 }

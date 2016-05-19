@@ -2743,9 +2743,6 @@ object {
 /*==============================================================================
 # TEMPORARY
 ==============================================================================*/
-article {
-  height: 1000px; }
-
 /*------------------------------------------------------------------------------
 # MOBILE
 ------------------------------------------------------------------------------*/
@@ -2792,7 +2789,7 @@ body {
   z-index: 500;
   height: 50px;
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
   background: #f6f5f7;
@@ -2834,8 +2831,8 @@ body {
 # MENU HIDE
 ------------------------------------------------------------------------------*/
 .main-navigation.nav-hide {
-  -webkit-transform: translate(0, 50px);
-          transform: translate(0, 50px); }
+  -webkit-transform: translate(0, -50px);
+          transform: translate(0, -50px); }
 
 /*------------------------------------------------------------------------------
 # HIDE MENU LOGO
@@ -2932,7 +2929,7 @@ body {
   z-index: 5; }
 
 .page-header {
-  height: 35vh; }
+  height: 40vh; }
 
 /*------------------------------------------------------------------------------
 # HOME HEADER
@@ -2944,6 +2941,7 @@ body {
   position: absolute;
   width: 100%;
   top: 50%;
+  padding-top: 50px;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%); }
 
@@ -3003,7 +3001,10 @@ body {
   margin-top: 3px;
   text-align: center;
   font-size: 0.9em;
-  font-weight: 100; }
+  font-weight: 100;
+  color: #fcfcfc;
+  font-family: "museo-sans", sans-serif;
+  text-transform: none; }
 
 /*==============================================================================
 # FOOTER
@@ -3073,30 +3074,137 @@ body {
   opacity: 0.4; }
 
 /*==============================================================================
-# HEADINGS
+# TYPOGRAPHY
 ==============================================================================*/
+/*------------------------------------------------------------------------------
+# HEADINGS
+------------------------------------------------------------------------------*/
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  clear: both; }
+  clear: both;
+  font-family: "lato", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-align: center; }
 
 h1 {
-  font-family: "lato", sans-serif;
-  font-weight: 900;
-  text-transform: uppercase;
-  text-align: center;
   font-size: 1.7em; }
 
 h2 {
-  font-family: "lato", sans-serif;
-  text-transform: uppercase;
   color: #ff7396;
   font-size: 1.6em;
+  margin: 20px 0 3px; }
+
+/*------------------------------------------------------------------------------
+# SPECIFIC STYLING
+------------------------------------------------------------------------------*/
+.home-heading-subtitle {
   text-align: center;
-  margin: 20px 0 10px; }
+  font-size: 0.9em;
+  display: block;
+  color: #ff7396;
+  margin: 0; }
+
+/*=============================================================================
+# BUTTONS
+==============================================================================*/
+/*------------------------------------------------------------------------------
+# BASIC BUTTON AND COLOURS
+------------------------------------------------------------------------------*/
+.btn {
+  display: inline-block;
+  padding: 5px 20px;
+  border: 1px solid;
+  transition: color 0.1s, background 0.1s; }
+
+.btn-bloom {
+  border-color: #ff7396;
+  color: #ff7396; }
+  .btn-bloom:active, .btn-bloom:hover {
+    color: #fcfcfc;
+    background: #ff7396; }
+
+.btn-ezra {
+  border-color: #5d63a4;
+  color: #5d63a4; }
+  .btn-ezra:active, .btn-ezra:hover {
+    color: #fcfcfc;
+    background: #5d63a4; }
+
+.btn-apogee {
+  border-color: #fcfcfc;
+  color: #fcfcfc; }
+  .btn-apogee:active, .btn-apogee:hover {
+    color: #222129;
+    background: #fcfcfc; }
+
+.btn-apollo {
+  border-color: #c1cad6;
+  color: #c1cad6; }
+  .btn-apollo:active, .btn-apollo:hover {
+    color: #fcfcfc;
+    background: #c1cad6; }
+
+.btn-desert-night {
+  border-color: #222129;
+  color: #222129; }
+  .btn-desert-night:active, .btn-desert-night:hover {
+    color: #fcfcfc;
+    background: #222129; }
+
+/*=============================================================================
+# PROJECTS AND POSTS
+==============================================================================*/
+/*------------------------------------------------------------------------------
+# PROJECT
+------------------------------------------------------------------------------*/
+.project-post {
+  box-sizing: border-box;
+  background: #f6f5f7;
+  width: 90%;
+  margin: 25px auto; }
+  .project-post figure {
+    margin: 0; }
+  .project-post img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0; }
+  .project-post .project-post-summary {
+    padding: 10px 20px 15px;
+    text-align: center; }
+  .project-post p {
+    text-align: left;
+    margin: 15px 10px 20px;
+    font-size: 0.9em; }
+  .project-post h3 {
+    color: #ff7396;
+    font-size: 1.4em; }
+
+.post-tags {
+  color: #c1cad6;
+  font-size: 0.9em;
+  transition: color 0.1s, opacity 0.1s; }
+  .post-tags a {
+    position: relative;
+    color: #c1cad6; }
+    .post-tags a::after {
+      content: '';
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      opacity: 0;
+      background: #ff7396; }
+    .post-tags a:hover, .post-tags a:active {
+      color: #ff7396; }
+      .post-tags a:hover::after, .post-tags a:active::after {
+        opacity: 1; }
 
 /*------------------------------------------------------------------------------
 # TABLET
@@ -3116,8 +3224,11 @@ h2 {
   .header-page-subtitle {
     font-size: 1.3em; }
   /*==============================================================================
-# HEADINGS TABLET
+# TYPOGRAPHY TABLET
 ==============================================================================*/
+  /*------------------------------------------------------------------------------
+# HEADINGS
+------------------------------------------------------------------------------*/
   h1 {
     font-size: 2.5em; } }
 
@@ -3135,7 +3246,6 @@ h2 {
     padding-top: 60px; }
   .main-navigation {
     background: #f9f9f9;
-    top: 0;
     height: 60px; }
     .main-navigation ul {
       width: 450px;
@@ -3153,9 +3263,9 @@ h2 {
     height: 60px;
     transition: fill 0.1s, background 0.1s; }
     .nav-logo-link:hover {
-      background: #ff7396; }
+      background: #f6f5f7; }
       .nav-logo-link:hover .nav-logo-bloom {
-        fill: #fcfcfc; }
+        fill: #ff648b; }
   .nav-logo-bloom {
     height: 1.2em;
     width: auto;
@@ -3234,8 +3344,11 @@ h2 {
   .header-logo-white {
     width: 6em; }
   /*==============================================================================
-# HEADINGS TABLET
+# TYPOGRAPHY WIDE
 ==============================================================================*/
+  /*------------------------------------------------------------------------------
+# HEADINGS
+------------------------------------------------------------------------------*/
   h1 {
     font-size: 2.8em; } }
 

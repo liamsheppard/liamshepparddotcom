@@ -64,8 +64,8 @@ function ls2016_setup() {
 	) );
 
 	add_theme_support( 'featured-content', array(
-    	'filter' => 'ls2016_get_featured_content',
-		'max_posts' => 5,
+    	'featured_content_filter' => 'ls2016_featured_content',
+		'max_posts' => 2,
 	) );
 
 
@@ -146,7 +146,7 @@ require get_template_directory() . '/inc/jetpack.php';
  * Add Featured Content for Front Page
  */
  function ls2016_get_featured_content() {
-     return apply_filters( 'ls2016_get_featured_content', array() );
+     return apply_filters( 'ls2016_featured_content', array() );
  }
 
  function ls2016_has_featured_posts( $minimum = 1 ) {
