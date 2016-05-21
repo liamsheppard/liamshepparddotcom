@@ -3,15 +3,20 @@
 ==============================================================================*/
 
 /*------------------------------------------------------------------------------
-# BASIC BUTTON AND COLOURS
+# BUTTON STYLES
 ------------------------------------------------------------------------------*/
 .btn {
     display: inline-block;
     padding: 5px 20px;
     border: 1px solid;
     transition: color 0.1s, background 0.1s;
+    //border-radius: 30px; // UNSURE OF THIS
+    //border-radius: 2px;
 }
 
+/*------------------------------------------------------------------------------
+# COLOURS
+------------------------------------------------------------------------------*/
 .btn-bloom {
     border-color: $bloom;
     color: $bloom;
@@ -64,5 +69,33 @@
     &:hover {
         color: $apogee;
         background: $desert-night;
+    }
+}
+
+/*------------------------------------------------------------------------------
+# COLOURS FOR STRIPS
+------------------------------------------------------------------------------*/
+
+.strip-bloom .btn {
+    &:hover {
+        color: $bloom;
+    }
+}
+
+.strip-ezra .btn {
+    &:hover {
+        color: $ezra;
+    }
+}
+
+.strip-apollo .btn {
+    &:hover {
+        color: $apollo;
+    }
+}
+
+.strip-desert-night .btn {
+    &:hover {
+        color: $desert-night;
     }
 }

@@ -7,9 +7,11 @@
 ------------------------------------------------------------------------------*/
 .project-post {
     box-sizing: border-box;
+    position: relative;
     background: $apollo-light;
     width: 90%;
     margin: 25px auto;
+    border-top: 2px solid $bloom;
 
     figure {
         margin: 0;
@@ -27,26 +29,22 @@
         text-align: center;
     }
 
-    .btn {
-        // REMOVE IF NOTHING ADDED
-    }
-
     p {
         text-align: left;
         margin: 15px 10px 20px;
-        font-size: 0.9em;
+        font-size: .9em;
     }
 
     h3 {
-        color: $bloom;
+        color: $desert-night;
         font-size: 1.4em;
     }
 }
 
 .post-tags {
     color: $apollo;
-    font-size: 0.9em;
-    transition: color 0.1s, opacity 0.1s;
+    font-size: .9em;
+    transition: color .1s, opacity .1s;
 
     a {
         position: relative;
@@ -72,4 +70,14 @@
             }
         }
     }
+}
+
+.post-date,
+.post-time-comments {
+    color: $bloom;
+    font-size: .9em;
+}
+
+.post-time-comments .time {
+    margin-right: 15px;
 }

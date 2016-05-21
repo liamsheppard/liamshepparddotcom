@@ -2765,7 +2765,7 @@ textarea {
 body {
   width: 100%;
   overflow-x: hidden;
-  background: #fcfcfc;
+  background: #fdfdff;
   font-family: "museo-sans", sans-serif;
   font-weight: 100; }
 
@@ -2774,10 +2774,10 @@ body {
 ------------------------------------------------------------------------------*/
 ::-moz-selection {
   background: rgba(32, 31, 38, 0.99);
-  color: #fcfcfc; }
+  color: #fdfdff; }
 ::selection {
   background: rgba(32, 31, 38, 0.99);
-  color: #fcfcfc; }
+  color: #fdfdff; }
 
 /*=============================================================================
 # NAVIGATION
@@ -2792,7 +2792,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: #f6f5f7;
+  background: #f5f4f6;
   transition: -webkit-transform 0.4s cubic-bezier(0.72, 0, 0, 0.98);
   transition: transform 0.4s cubic-bezier(0.72, 0, 0, 0.98);
   transition: transform 0.4s cubic-bezier(0.72, 0, 0, 0.98), -webkit-transform 0.4s cubic-bezier(0.72, 0, 0, 0.98); }
@@ -2823,10 +2823,23 @@ body {
     color: #909aa6;
     transition: color 0.1s, background 0.1s; }
 
-.current_page_item a {
-  color: #fcfcfc;
+.current-menu-item a {
+  color: #fdfdff;
   background: #ff7396; }
+  .current-menu-item a:after {
+    background: #ff7396; }
 
+/*
+.nav-item-contact.current-menu-item a::after,
+.current-menu-item a::after {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 1px);
+    z-index: -1;
+} */
 /*------------------------------------------------------------------------------
 # MENU HIDE
 ------------------------------------------------------------------------------*/
@@ -2856,7 +2869,7 @@ body {
           transform: translate(-50%, 0);
   background-size: 50px; }
 
-.menu-item.current_page_item::before {
+.menu-item.current-menu-item::before {
   z-index: 1; }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2.5), only screen and (min-resolution: 240dpi) {
@@ -2866,7 +2879,7 @@ body {
 /*------------------------------------------------------------------------------
 # HOME
 ------------------------------------------------------------------------------*/
-.nav-item-home.current_page_item::before {
+.nav-item-home.current-menu-item::before {
   background-position: 0 0; }
 
 .nav-item-home::before {
@@ -2875,7 +2888,7 @@ body {
 /*------------------------------------------------------------------------------
 # WORK
 ------------------------------------------------------------------------------*/
-.nav-item-work.current_page_item::before {
+.nav-item-work.current-menu-item::before {
   background-position: 0 -25px; }
 
 .nav-item-work::before {
@@ -2884,7 +2897,7 @@ body {
 /*------------------------------------------------------------------------------
 # BLOG
 ------------------------------------------------------------------------------*/
-.nav-item-blog.current_page_item::before {
+.nav-item-blog.current-menu-item::before {
   background-position: 0 -50px; }
 
 .nav-item-blog::before {
@@ -2893,7 +2906,7 @@ body {
 /*------------------------------------------------------------------------------
 # ABOUT
 ------------------------------------------------------------------------------*/
-.nav-item-about.current_page_item::before {
+.nav-item-about.current-menu-item::before {
   background-position: 0 -75px; }
 
 .nav-item-about::before {
@@ -2905,15 +2918,19 @@ body {
 .nav-item-contact::before {
   background-position: 25px -100px; }
 
-.nav-item-contact.current_page_item::before {
+.nav-item-contact.current-menu-item::before {
   background-position: 0 -100px; }
 
 .nav-item-contact a {
   color: #5d63a4; }
 
-.nav-item-contact.current_page_item a {
+.nav-item-contact.current-menu-item a {
   background: #5d63a4;
-  color: #fcfcfc; }
+  color: #fdfdff;
+  /*
+    &::after {
+        background: $ezra;
+    } */ }
 
 /*==============================================================================
 # HEADER
@@ -2923,10 +2940,19 @@ body {
 ------------------------------------------------------------------------------*/
 .site-header {
   position: relative;
-  background: #ff7396;
-  color: #fcfcfc;
+  color: #fdfdff;
   width: 100%;
-  z-index: 5; }
+  z-index: 5;
+  background: #ff7396; }
+  .site-header::before {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 115, 150, 0.95);
+    z-index: -1; }
 
 .page-header {
   height: 40vh; }
@@ -2954,9 +2980,9 @@ body {
           transform: translate(-50%, 0);
   width: 40px;
   height: 30px;
-  color: #fcfcfc;
+  color: #fdfdff;
   transition: color 0.2s; }
-  .header-scroll-container:hover {
+  .header-scroll-container:hover, .header-scroll-container:active {
     color: #222129; }
 
 .header-scroll-text {
@@ -2992,7 +3018,7 @@ body {
   margin: 0 auto 6px;
   width: 80px;
   height: auto;
-  fill: #fcfcfc; }
+  fill: #fdfdff; }
 
 /*------------------------------------------------------------------------------
 # SUBTITLE
@@ -3002,7 +3028,7 @@ body {
   text-align: center;
   font-size: 0.9em;
   font-weight: 100;
-  color: #fcfcfc;
+  color: #fdfdff;
   font-family: "museo-sans", sans-serif;
   text-transform: none; }
 
@@ -3015,11 +3041,11 @@ body {
 .page-footer {
   width: 100%;
   background: #222129;
-  color: #fcfcfc;
+  color: #fdfdff;
   font-size: 1em; }
 
 .page-footer a {
-  color: #fcfcfc; }
+  color: #fdfdff; }
 
 .footer-content-wrapper {
   padding: 20px 0; }
@@ -3092,11 +3118,11 @@ h6 {
   text-align: center; }
 
 h1 {
-  font-size: 1.7em; }
+  font-size: 1.8em; }
 
 h2 {
   color: #ff7396;
-  font-size: 1.6em;
+  font-size: 1.7em;
   margin: 20px 0 3px; }
 
 /*------------------------------------------------------------------------------
@@ -3113,7 +3139,7 @@ h2 {
 # BUTTONS
 ==============================================================================*/
 /*------------------------------------------------------------------------------
-# BASIC BUTTON AND COLOURS
+# BUTTON STYLES
 ------------------------------------------------------------------------------*/
 .btn {
   display: inline-block;
@@ -3121,40 +3147,95 @@ h2 {
   border: 1px solid;
   transition: color 0.1s, background 0.1s; }
 
+/*------------------------------------------------------------------------------
+# COLOURS
+------------------------------------------------------------------------------*/
 .btn-bloom {
   border-color: #ff7396;
   color: #ff7396; }
   .btn-bloom:active, .btn-bloom:hover {
-    color: #fcfcfc;
+    color: #fdfdff;
     background: #ff7396; }
 
 .btn-ezra {
   border-color: #5d63a4;
   color: #5d63a4; }
   .btn-ezra:active, .btn-ezra:hover {
-    color: #fcfcfc;
+    color: #fdfdff;
     background: #5d63a4; }
 
 .btn-apogee {
-  border-color: #fcfcfc;
-  color: #fcfcfc; }
+  border-color: #fdfdff;
+  color: #fdfdff; }
   .btn-apogee:active, .btn-apogee:hover {
     color: #222129;
-    background: #fcfcfc; }
+    background: #fdfdff; }
 
 .btn-apollo {
   border-color: #c1cad6;
   color: #c1cad6; }
   .btn-apollo:active, .btn-apollo:hover {
-    color: #fcfcfc;
+    color: #fdfdff;
     background: #c1cad6; }
 
 .btn-desert-night {
   border-color: #222129;
   color: #222129; }
   .btn-desert-night:active, .btn-desert-night:hover {
-    color: #fcfcfc;
+    color: #fdfdff;
     background: #222129; }
+
+/*------------------------------------------------------------------------------
+# COLOURS FOR STRIPS
+------------------------------------------------------------------------------*/
+.strip-bloom .btn:hover {
+  color: #ff7396; }
+
+.strip-ezra .btn:hover {
+  color: #5d63a4; }
+
+.strip-apollo .btn:hover {
+  color: #c1cad6; }
+
+.strip-desert-night .btn:hover {
+  color: #222129; }
+
+/*=============================================================================
+# STRIP
+==============================================================================*/
+/*------------------------------------------------------------------------------
+# BASIC STRIPS
+------------------------------------------------------------------------------*/
+.strip {
+  display: block;
+  width: 100%; }
+
+.strip-btn {
+  text-align: center;
+  height: 65px;
+  position: relative; }
+
+.strip-btn .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
+/*------------------------------------------------------------------------------
+# STRIP COLOURS
+------------------------------------------------------------------------------*/
+.strip-bloom {
+  background: #ff7396; }
+
+.strip-ezra {
+  background: #5d63a4; }
+
+.strip-apollo {
+  background: #c1cad6; }
+
+.strip-desert-night {
+  background: #222129; }
 
 /*=============================================================================
 # PROJECTS AND POSTS
@@ -3164,9 +3245,11 @@ h2 {
 ------------------------------------------------------------------------------*/
 .project-post {
   box-sizing: border-box;
-  background: #f6f5f7;
+  position: relative;
+  background: #f5f4f6;
   width: 90%;
-  margin: 25px auto; }
+  margin: 25px auto;
+  border-top: 2px solid #ff7396; }
   .project-post figure {
     margin: 0; }
   .project-post img {
@@ -3180,15 +3263,15 @@ h2 {
   .project-post p {
     text-align: left;
     margin: 15px 10px 20px;
-    font-size: 0.9em; }
+    font-size: .9em; }
   .project-post h3 {
-    color: #ff7396;
+    color: #222129;
     font-size: 1.4em; }
 
 .post-tags {
   color: #c1cad6;
-  font-size: 0.9em;
-  transition: color 0.1s, opacity 0.1s; }
+  font-size: .9em;
+  transition: color .1s, opacity .1s; }
   .post-tags a {
     position: relative;
     color: #c1cad6; }
@@ -3205,6 +3288,14 @@ h2 {
       color: #ff7396; }
       .post-tags a:hover::after, .post-tags a:active::after {
         opacity: 1; }
+
+.post-date,
+.post-time-comments {
+  color: #ff7396;
+  font-size: .9em; }
+
+.post-time-comments .time {
+  margin-right: 15px; }
 
 /*------------------------------------------------------------------------------
 # TABLET
@@ -3245,7 +3336,7 @@ h2 {
   .site-header {
     padding-top: 60px; }
   .main-navigation {
-    background: #f9f9f9;
+    background: ghostwhite;
     height: 60px; }
     .main-navigation ul {
       width: 450px;
@@ -3263,7 +3354,7 @@ h2 {
     height: 60px;
     transition: fill 0.1s, background 0.1s; }
     .nav-logo-link:hover {
-      background: #f6f5f7; }
+      background: #f5f4f6; }
       .nav-logo-link:hover .nav-logo-bloom {
         fill: #ff648b; }
   .nav-logo-bloom {
@@ -3286,27 +3377,27 @@ h2 {
     line-height: 60px;
     text-transform: none; }
     .menu-item a:hover {
-      background: #f6f5f7;
+      background: #f5f4f6;
       color: #ff7396; }
   /*------------------------------------------------------------------------------
 # CURRENT PAGE
 ------------------------------------------------------------------------------*/
-  .current_page_item a {
+  .current-menu-item a {
     background: #ff7396;
-    color: #fcfcfc; }
-    .current_page_item a:hover {
-      color: #fcfcfc;
+    color: #fdfdff; }
+    .current-menu-item a:hover {
+      color: #fdfdff;
       background: #ff648b; }
-  .current_page_item a::before {
+  .current-menu-item a::before {
     content: none; }
   /*------------------------------------------------------------------------------
 # CONTACT
 ------------------------------------------------------------------------------*/
   .nav-item-contact a {
-    color: #fcfcfc;
+    color: #fdfdff;
     background: #5d63a4; }
     .nav-item-contact a:hover {
-      color: #fcfcfc;
+      color: #fdfdff;
       background: #575d9b; }
   /*------------------------------------------------------------------------------
 # MENU HIDE

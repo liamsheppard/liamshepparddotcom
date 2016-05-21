@@ -43,10 +43,26 @@
     }
 }
 
-.current_page_item a {
+.current-menu-item a {
     color: $apogee;
     background: $bloom;
+
+    &:after {
+        background: $bloom;
+    }
 }
+
+/*
+.nav-item-contact.current-menu-item a::after,
+.current-menu-item a::after {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 1px);
+    z-index: -1;
+} */
 
 
 /*------------------------------------------------------------------------------
@@ -81,7 +97,7 @@
     background-size: 50px;
 }
 
-.menu-item.current_page_item::before {
+.menu-item.current-menu-item::before {
     z-index: 1;
 }
 
@@ -97,7 +113,7 @@ only screen and (min-resolution: 240dpi) {
 /*------------------------------------------------------------------------------
 # HOME
 ------------------------------------------------------------------------------*/
-.nav-item-home.current_page_item::before {
+.nav-item-home.current-menu-item::before {
     background-position: 0 0;
 }
 
@@ -109,7 +125,7 @@ only screen and (min-resolution: 240dpi) {
 /*------------------------------------------------------------------------------
 # WORK
 ------------------------------------------------------------------------------*/
-.nav-item-work.current_page_item::before {
+.nav-item-work.current-menu-item::before {
     background-position: 0 -25px;
 }
 
@@ -121,7 +137,7 @@ only screen and (min-resolution: 240dpi) {
 /*------------------------------------------------------------------------------
 # BLOG
 ------------------------------------------------------------------------------*/
-.nav-item-blog.current_page_item::before {
+.nav-item-blog.current-menu-item::before {
     background-position: 0 -50px;
 }
 
@@ -133,7 +149,7 @@ only screen and (min-resolution: 240dpi) {
 /*------------------------------------------------------------------------------
 # ABOUT
 ------------------------------------------------------------------------------*/
-.nav-item-about.current_page_item::before {
+.nav-item-about.current-menu-item::before {
     background-position: 0 -75px;
 }
 
@@ -149,7 +165,7 @@ only screen and (min-resolution: 240dpi) {
     background-position: 25px -100px;
 }
 
-.nav-item-contact.current_page_item::before {
+.nav-item-contact.current-menu-item::before {
     background-position: 0 -100px;
 }
 
@@ -157,7 +173,12 @@ only screen and (min-resolution: 240dpi) {
     color: $ezra;
 }
 
-.nav-item-contact.current_page_item a {
+.nav-item-contact.current-menu-item a {
     background: $ezra;
-        color: $apogee;
+    color: $apogee;
+
+    /*
+    &::after {
+        background: $ezra;
+    } */
 }
