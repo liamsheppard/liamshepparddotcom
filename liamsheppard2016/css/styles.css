@@ -2770,6 +2770,44 @@ body {
   font-weight: 100; }
 
 /*------------------------------------------------------------------------------
+# LOADER
+------------------------------------------------------------------------------*/
+span.infinite-loader {
+  position: relative;
+  background: #ff7396;
+  height: 65px; }
+  span.infinite-loader::before, span.infinite-loader::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    border: 1px solid #fdfdff;
+    background: #fdfdff;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 20000;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    -webkit-animation-duration: .4s;
+            animation-duration: .4s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out; }
+  span.infinite-loader::before {
+    left: calc(50% - 10px);
+    -webkit-animation-name: infinite-loader-left;
+            animation-name: infinite-loader-left; }
+  span.infinite-loader::after {
+    left: calc(50% + 10px);
+    -webkit-animation-name: infinite-loader-right;
+            animation-name: infinite-loader-right; }
+  span.infinite-loader .spinner {
+    display: none; }
+
+/*------------------------------------------------------------------------------
 # SELECTION
 ------------------------------------------------------------------------------*/
 ::-moz-selection {
@@ -2994,7 +3032,8 @@ body {
   -webkit-animation-name: scroll-animation-icon;
           animation-name: scroll-animation-icon; }
 
-.header-scroll-icon, .header-scroll-text {
+.header-scroll-icon,
+.header-scroll-text {
   display: block;
   position: absolute;
   left: 50%;
@@ -3271,7 +3310,8 @@ h2 {
 .post-tags {
   color: #c1cad6;
   font-size: .9em;
-  transition: color .1s, opacity .1s; }
+  transition: color .1s, opacity .1s;
+  cursor: default; }
   .post-tags a {
     position: relative;
     color: #c1cad6; }
@@ -3446,6 +3486,12 @@ h2 {
 /*------------------------------------------------------------------------------
 # ANIMATIONS
 ------------------------------------------------------------------------------*/
+/*==============================================================================
+# ANIMATIONS
+==============================================================================*/
+/*------------------------------------------------------------------------------
+# HOME HEADER SCROLL
+------------------------------------------------------------------------------*/
 @-webkit-keyframes scroll-animation-text {
   0% {
     opacity: 1;
@@ -3476,6 +3522,32 @@ h2 {
   100% {
     opacity: 0.5;
     bottom: 3px; } }
+
+/*------------------------------------------------------------------------------
+# INFINITE LOADER
+------------------------------------------------------------------------------*/
+@-webkit-keyframes infinite-loader-left {
+  0% {
+    background: rgba(253, 253, 255, 0); }
+  100% {
+    background: #fdfdff; } }
+@keyframes infinite-loader-left {
+  0% {
+    background: rgba(253, 253, 255, 0); }
+  100% {
+    background: #fdfdff; } }
+
+@-webkit-keyframes infinite-loader-right {
+  0% {
+    background: #fdfdff; }
+  100% {
+    background: rgba(253, 253, 255, 0); } }
+
+@keyframes infinite-loader-right {
+  0% {
+    background: #fdfdff; }
+  100% {
+    background: rgba(253, 253, 255, 0); } }
 
 /*------------------------------------------------------------------------------
 # SHAME

@@ -25,6 +25,47 @@ body {
     font-weight: 100;
 }
 
+/*------------------------------------------------------------------------------
+# LOADER
+------------------------------------------------------------------------------*/
+span.infinite-loader {
+	position: relative;
+	background: $bloom;
+	height: 65px;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		border: 1px solid $apogee;
+		background: $apogee;
+		transform: translate(-50%, -50%);
+		z-index: 20000;
+		width: 10px;
+		height: 10px;
+		border-radius: 5px;
+	    animation-duration: .4s;
+	    animation-iteration-count: infinite;
+	    animation-direction: alternate;
+	    animation-timing-function: ease-in-out;
+	}
+
+	&::before {
+		left: calc(50% - 10px);
+	    animation-name: infinite-loader-left;
+	}
+
+	&::after {
+		left: calc(50% + 10px);
+	    animation-name: infinite-loader-right;
+	}
+
+	.spinner {
+		display: none;
+	}
+}
+
 
 /*------------------------------------------------------------------------------
 # SELECTION

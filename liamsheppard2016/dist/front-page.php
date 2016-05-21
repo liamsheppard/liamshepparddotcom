@@ -15,7 +15,7 @@ get_header(); ?>
 
     	<?php query_posts( array ( 'category_name' => 'work', 'posts_per_page' => 2 ) );
         if (have_posts()) : while (have_posts()) : the_post();
-                include("project-post.php");
+                include("template-parts/project-post.php");
     	endwhile;
         endif; ?>
 
@@ -28,7 +28,7 @@ get_header(); ?>
 
     	<?php query_posts( array ( 'category_name' => 'blog', 'posts_per_page' => 2 ) );
         if (have_posts()) : while (have_posts()) : the_post();
-                include("project-post.php");
+                include("template-parts/project-post.php");
         endwhile;
         endif; ?>
 

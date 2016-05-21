@@ -10,6 +10,11 @@ else :
     $class = '';
 endif;
 
+$post_classes = array(
+    'project-post',
+    $class,
+);
+
 // Get meta information
 if ( get_post_meta($post->ID, 'button_tagline', true) ) :
     $button_text = get_post_meta($post->ID, 'button_tagline', true);
@@ -22,7 +27,7 @@ if ( get_post_meta($post->ID, 'read_time', true) ) :
 endif;
 ?>
 
-<div class='project-post <?php echo $class; ?>'>
+<div id="post-<?php the_ID(); ?>" <?php post_class( $post_classes ); ?>>
     <?php if ( has_post_thumbnail() ) { ?>
         <figure class='project-image-wrapper'>
             <?php the_post_thumbnail(); ?>

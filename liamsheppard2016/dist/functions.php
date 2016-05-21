@@ -63,11 +63,6 @@ function ls2016_setup() {
 		'link',
 	) );
 
-	add_theme_support( 'featured-content', array(
-    	'featured_content_filter' => 'ls2016_featured_content',
-		'max_posts' => 2,
-	) );
-
 
 }
 endif;
@@ -111,8 +106,11 @@ function ls2016_scripts() {
 
 	wp_enqueue_script( 'jquery' );
 
-	wp_register_script( 'ls2016-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '1', true );
-	wp_enqueue_script( 'ls2016-navigation' );
+	/*wp_register_script( 'ls2016-turbolinks', get_template_directory_uri() . '/js/turbolinks.js', array( 'jquery' ), '1', true );
+	wp_enqueue_script( 'ls2016-turbolinks' );*/
+
+	wp_register_script( 'ls2016-javascript', get_template_directory_uri() . '/js/main.js', array( 'jquery'/*, 'ls2016-turbolinks'*/ ), '1', true );
+	wp_enqueue_script( 'ls2016-javascript' );
 
 	wp_enqueue_script( 'ls2016-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -141,26 +139,3 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
-
-/**
- * Add Featured Content for Front Page
- */
- function ls2016_get_featured_content() {
-     return apply_filters( 'ls2016_featured_content', array() );
- }
-
- function ls2016_has_featured_posts( $minimum = 1 ) {
-    if ( is_paged() )
-        return false;
-
-    $minimum = absint( $minimum );
-    $featured_posts = apply_filters( 'ls2016_get_featured_posts', array() );
-
-    if ( ! is_array( $featured_posts ) )
-        return false;
-
-    if ( $minimum > count( $featured_posts ) )
-        return false;
-
-    return true;
-}

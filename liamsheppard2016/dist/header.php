@@ -29,18 +29,18 @@ o      o      o      o      o       o         o
 
 	<title>
 	<?php /* PAGE TITLE */
-	if ( is_front_page() ) {
+	if ( is_front_page() ) :
 		echo $blogtitle;
-	} else if ( is_archive() ) {
+	elseif ( is_archive() ) :
 		$title = get_the_archive_title(); // This is also used for the header.
 		$title = str_replace("Category: ","",$title); // FORMAT TITLE
 		echo $title . ' | ' . $blogtitle;
-	} else if ( have_posts() ) {
-		while ( have_posts() ) {
+	elseif ( have_posts() ) :
+		while ( have_posts() ) :
 			the_post();
 			the_title('', ' | ' . $blogtitle);
-		}
-	} ?>
+		endwhile;
+	endif; ?>
 	</title>
 
 	<!-- TYPEFACES -->
@@ -86,28 +86,28 @@ o      o      o      o      o       o         o
                 <h1 class='header-page-title'>
 					<?php
 					/* GET PAGE TITLE */
-					if ( is_front_page() ) { // IF HOMEPAGE
+					if ( is_front_page() ) : // IF HOMEPAGE
 						echo $blogtitle;
-					} else if ( is_archive() ) { // IF ARCHIVE
+					elseif ( is_archive() ) : // IF ARCHIVE
 						echo $title;
-					} else { // IF POST
+					else : // IF POST
 				        while ( have_posts() ) : the_post();
 							echo the_title();
 						endwhile;
-					} ?>
+					endif; ?>
 				</h1>
                 <h2 class='header-page-subtitle'>
 					<?php
 					/* GET PAGE SUBTITLE */
-					if ( is_front_page() ) { // IF HOMEPAGE
+					if ( is_front_page() ) : // IF HOMEPAGE
 						bloginfo('description');
-					} else if ( is_archive() ) { // IF ARCHIVE
+					elseif ( is_archive() ) : // IF ARCHIVE
 						echo get_the_archive_description();
-					} else { // IF POST
+					else : // IF POST
 				        while ( have_posts() ) : the_post();
 							echo the_title();
 						endwhile;
-					} ?>
+					endif; ?>
 				</h2>
             </div><!-- .site-branding -->
             <?php if ( is_front_page() ) { ?><a href='#' class='header-scroll-container'>
