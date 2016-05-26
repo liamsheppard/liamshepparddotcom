@@ -19,9 +19,9 @@ get_header(); ?>
     	endwhile;
         endif; ?>
 
-    	<div class='strip strip-desert-night strip-btn'>
+    	<div class='strip strip-bloom strip-btn'>
     		<a href='/work' class='btn btn-apogee'>More Projects</a>
-    	</div>
+    	</div> <!-- END .strip-desert-night -->
 
         <h2>Latest Posts</h2>
         <span class='home-heading-subtitle'>Opinions & Tutorials</span>
@@ -32,13 +32,13 @@ get_header(); ?>
         endwhile;
         endif; ?>
 
-        <div class='strip strip-desert-night strip-btn'>
+        <div class='strip strip-bloom strip-btn'>
     		<a href='/blog' class='btn btn-apogee'>More Posts</a>
-    	</div>
+    	</div> <!-- END .strip-desert-night -->
 
         <div class='strip strip-ezra strip-btn'>
 
-        </div>
+        </div> <!-- END .strip-ezra -->
 
     	<!-- Twitter Scrolling Feed -->
     	<?php if ( is_active_sidebar( 'twitter-widget' ) ) : ?>

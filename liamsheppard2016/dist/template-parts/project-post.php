@@ -28,13 +28,17 @@ endif;
 ?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class( $post_classes ); ?>>
-    <?php if ( has_post_thumbnail() ) { ?>
+    <?php if ( has_post_thumbnail() ) : ?>
         <figure class='project-image-wrapper'>
             <?php the_post_thumbnail(); ?>
         </figure>
-    <?php } ?>
+    <?php endif; ?>
 
     <div class='project-post-summary'>
+        <?php if ( has_post_thumbnail() ) : ?>
+            <div class='centre-content-y'>
+        <?php endif; ?>
+
         <a href='<?php the_permalink(); ?>'><h3><?php the_title(); ?></h3></a>
         <?php if ( in_category( 'blog' ) ) : ?>
             <span class='post-date'>Published <?php the_date('F j, Y'); ?></span>
@@ -47,6 +51,10 @@ endif;
         </div>
         <span class='post-tags'><?php the_tags( '', ', ', '' ); ?></span>
         <?php the_excerpt(); ?>
-        <a href='<?php the_permalink(); ?>' class='btn btn-desert-night'><?php echo $button_text; ?></a>
-    </div>
-</div>
+        <a href='<?php the_permalink(); ?>' class='btn btn-bloom'><?php echo $button_text; ?></a>
+
+        <?php if ( has_post_thumbnail() ) : ?>
+        </div> <!-- END .centre-content-y -->
+        <?php endif; ?>
+    </div> <!-- END .project-post-summary -->
+</div> <!-- END .project-post -->

@@ -2960,10 +2960,10 @@ span.infinite-loader {
   background-position: 0 -100px; }
 
 .nav-item-contact a {
-  color: #5d63a4; }
+  color: #4b61a6; }
 
 .nav-item-contact.current-menu-item a {
-  background: #5d63a4;
+  background: #4b61a6;
   color: #fdfdff;
   /*
     &::after {
@@ -3184,7 +3184,8 @@ h2 {
   display: inline-block;
   padding: 5px 20px;
   border: 1px solid;
-  transition: color 0.1s, background 0.1s; }
+  transition: color 0.1s, background 0.1s;
+  border-radius: 2px; }
 
 /*------------------------------------------------------------------------------
 # COLOURS
@@ -3197,11 +3198,11 @@ h2 {
     background: #ff7396; }
 
 .btn-ezra {
-  border-color: #5d63a4;
-  color: #5d63a4; }
+  border-color: #4b61a6;
+  color: #4b61a6; }
   .btn-ezra:active, .btn-ezra:hover {
     color: #fdfdff;
-    background: #5d63a4; }
+    background: #4b61a6; }
 
 .btn-apogee {
   border-color: #fdfdff;
@@ -3231,7 +3232,7 @@ h2 {
   color: #ff7396; }
 
 .strip-ezra .btn:hover {
-  color: #5d63a4; }
+  color: #4b61a6; }
 
 .strip-apollo .btn:hover {
   color: #c1cad6; }
@@ -3268,7 +3269,7 @@ h2 {
   background: #ff7396; }
 
 .strip-ezra {
-  background: #5d63a4; }
+  background: #4b61a6; }
 
 .strip-apollo {
   background: #c1cad6; }
@@ -3304,7 +3305,7 @@ h2 {
     margin: 15px 10px 20px;
     font-size: .9em; }
   .project-post h3 {
-    color: #222129;
+    color: #ff7396;
     font-size: 1.4em; }
 
 .post-tags {
@@ -3435,10 +3436,10 @@ h2 {
 ------------------------------------------------------------------------------*/
   .nav-item-contact a {
     color: #fdfdff;
-    background: #5d63a4; }
+    background: #4b61a6; }
     .nav-item-contact a:hover {
       color: #fdfdff;
-      background: #575d9b; }
+      background: #465b9b; }
   /*------------------------------------------------------------------------------
 # MENU HIDE
 ------------------------------------------------------------------------------*/
@@ -3473,7 +3474,7 @@ h2 {
 # LOGO
 ------------------------------------------------------------------------------*/
   .header-logo-white {
-    width: 6em; }
+    width: 7em; }
   /*==============================================================================
 # TYPOGRAPHY WIDE
 ==============================================================================*/
@@ -3481,7 +3482,86 @@ h2 {
 # HEADINGS
 ------------------------------------------------------------------------------*/
   h1 {
-    font-size: 2.8em; } }
+    font-size: 3em; }
+  h2 {
+    font-size: 2.8em;
+    margin: 50px 0 0; }
+  /*------------------------------------------------------------------------------
+# SPECIFIC STYLING
+------------------------------------------------------------------------------*/
+  .home-heading-subtitle {
+    font-size: 1.5em; }
+  /*=============================================================================
+# BUTTONS
+==============================================================================*/
+  /*------------------------------------------------------------------------------
+# BUTTON STYLES
+------------------------------------------------------------------------------*/
+  .btn {
+    font-size: 1.1em; }
+  /*=============================================================================
+# STRIPS WIDE
+==============================================================================*/
+  /*------------------------------------------------------------------------------
+# BASIC STRIPS
+------------------------------------------------------------------------------*/
+  .strip-btn {
+    height: 120px; }
+  /*=============================================================================
+# PROJECTS AND POSTS WIDESCREEN
+==============================================================================*/
+  /*------------------------------------------------------------------------------
+# PROJECT
+------------------------------------------------------------------------------*/
+  .project-post {
+    max-width: 1080px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    border-top: none;
+    margin: 70px auto; }
+    .project-post h3 {
+      font-size: 1.8em;
+      text-align: left; }
+    .project-post h3,
+    .project-post .post-date {
+      margin-bottom: -8px; }
+    .project-post figure {
+      width: 50%;
+      padding-right: 40px; }
+      .project-post figure img {
+        width: 100%;
+        display: block; }
+  .post-tags {
+    display: block; }
+  .project-post-summary {
+    width: 100%;
+    position: relative; }
+    .project-post-summary p {
+      margin: 20px 10px 25px;
+      font-size: 1.1em;
+      line-height: 1.4; }
+  .project-post .project-post-summary {
+    text-align: left;
+    padding: 15px 30px 20px; }
+  .has-post-thumbnail .project-post-summary {
+    width: 50%; }
+  .centre-content-y {
+    width: 100%;
+    padding: 0 30px 0 40px;
+    position: absolute;
+    left: 50%;
+    top: calc(50% - 4px);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+  .project-post .post-time-comments {
+    position: absolute;
+    right: 30px;
+    bottom: 27px;
+    font-size: 1.1em;
+    color: #c1cad6; }
+  .project-post .centre-content-y .post-time-comments {
+    bottom: 7px; } }
 
 /*------------------------------------------------------------------------------
 # ANIMATIONS

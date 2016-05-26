@@ -1,0 +1,79 @@
+/*=============================================================================
+# PROJECTS AND POSTS WIDESCREEN
+==============================================================================*/
+
+/*------------------------------------------------------------------------------
+# PROJECT
+------------------------------------------------------------------------------*/
+.project-post {
+    max-width: 1080px;
+    display: flex;
+    border-top: none;
+    margin: 70px auto;
+
+    h3 {
+        font-size: 1.8em;
+        text-align: left;
+    }
+
+    h3,
+    .post-date {
+        margin-bottom: -8px;
+    }
+
+    figure {
+        width: 50%;
+        padding-right: 40px;
+
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+
+}
+
+.post-tags {
+    display: block;
+}
+
+.project-post-summary {
+    width: 100%;
+    position: relative;
+
+    p {
+        margin: 20px 10px 25px;
+        font-size: 1.1em;
+        line-height: 1.4;
+    }
+}
+
+.project-post .project-post-summary {
+    text-align: left;
+    padding: 15px 30px 20px;
+}
+
+.has-post-thumbnail .project-post-summary {
+    width: 50%;
+}
+
+.centre-content-y {
+    width: 100%;
+    padding: 0 30px 0 40px;
+    position: absolute;
+    left: 50%;
+    top: calc(50% - 4px);
+    transform: translate(-50%, -50%);
+}
+
+.project-post .post-time-comments {
+    position: absolute;
+    right: 30px;
+    bottom: 27px;
+    font-size: 1.1em;
+    color: $apollo;
+}
+
+.project-post .centre-content-y .post-time-comments {
+    bottom: 7px;
+}
