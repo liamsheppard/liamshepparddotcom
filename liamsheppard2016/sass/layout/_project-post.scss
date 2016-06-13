@@ -8,7 +8,7 @@
 .project-post {
     box-sizing: border-box;
     position: relative;
-    background: $apollo-light;
+    background: darken($apogee, 1%);
     width: 90%;
     margin: 25px auto;
     border-top: 2px solid $bloom;
