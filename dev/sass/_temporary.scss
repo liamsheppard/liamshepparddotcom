@@ -3,6 +3,13 @@
 ==============================================================================*/
 
 .nav-search-bar,
-.nav-search-svg {
+.nav-search-svg,
+.searchbar-close-svg {
   display: none;
+}
+
+@media screen and (min-width: $bp-wide) {
+  .searchbar-close-svg {
+    display: block;
+  }
 }

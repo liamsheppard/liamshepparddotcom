@@ -2,15 +2,19 @@
 # HEADER WIDE
 ==============================================================================*/
 .header-content-wrapper {
-    padding-top: $wide-nav-height;
+    //padding-top: $wide-nav-height;
 }
 
 .page-header {
     height: 40vh;
 }
 
-.home-header {
-    height: 80vh;
+
+/*------------------------------------------------------------------------------
+# TITLE
+------------------------------------------------------------------------------*/
+.home-header .header-page-title {
+  font-size: 6em;
 }
 
 
