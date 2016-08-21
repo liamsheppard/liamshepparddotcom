@@ -11,32 +11,32 @@
 /*------------------------------------------------------------------------------
 # BASE
 ------------------------------------------------------------------------------*/
-@import '_variables';
-@import '_reset';
-@import '_underscores';
-@import '_temporary';
+@import 'variables';
+@import 'reset';
+@import 'underscores';
+@import 'temporary';
 
 
 /*------------------------------------------------------------------------------
 # MOBILE
 ------------------------------------------------------------------------------*/
-@import 'layout/_body';
-@import 'layout/_navigation';
-@import 'layout/_header';
-@import 'layout/_footer';
-@import 'typography/_typography';
-@import 'layout/_buttons';
+@import 'layout/body';
+@import 'layout/navigation';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'typography/typography';
+@import 'layout/buttons';
 @import 'layout/strips';
-@import 'layout/_project-post';
+@import 'layout/project-post';
 
 
 /*------------------------------------------------------------------------------
 # TABLET
 ------------------------------------------------------------------------------*/
 @media screen and (min-width: $bp-tablet) {
-    @import 'layout/_body-tab';
-    @import 'layout/_header-tab';
-    @import 'typography/_typography-tab';
+    @import 'layout/body-tab';
+    @import 'layout/header-tab';
+    @import 'typography/typography-tab';
 }
 
 
@@ -44,23 +44,23 @@
 # WIDE
 ------------------------------------------------------------------------------*/
 @media screen and (min-width: $bp-wide) {
-    @import 'layout/_body-wide';
-    @import 'layout/_navigation-wide';
-    @import 'layout/_header-wide';
-    @import 'typography/_typography-wide';
-    @import 'layout/_buttons-wide';
+    @import 'layout/body-wide';
+    @import 'layout/navigation-wide';
+    @import 'layout/header-wide';
+    @import 'typography/typography-wide';
+    @import 'layout/buttons-wide';
     @import 'layout/strips-wide';
-    @import 'layout/_project-post-wide';
+    @import 'layout/project-post-wide';
 }
 
 
 /*------------------------------------------------------------------------------
 # ANIMATIONS
 ------------------------------------------------------------------------------*/
-@import 'misc/_animations';
+@import 'misc/animations';
 
 
 /*------------------------------------------------------------------------------
 # SHAME
 ------------------------------------------------------------------------------*/
-@import '_shame';
+@import 'shame';

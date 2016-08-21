@@ -1,5 +1,0 @@
-Formidable                 from formidablepro.com
-Rotating Tweets            from wordpress.org/plugins/rotatingtweets
-Google Analytics by Yoast  from yoast.com/wordpress/plugins/google-analytics
-Yoast SEO                  from yoast.com/wordpress/plugins/seo
-Simple Share Buttons Adder from wordpress.org/plugins/simple-share-buttons-adder
