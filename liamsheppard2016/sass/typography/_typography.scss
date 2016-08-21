@@ -1,41 +1,14 @@
-/*==============================================================================
-# TYPOGRAPHY
-==============================================================================*/
-
-/*------------------------------------------------------------------------------
-# HEADINGS
-------------------------------------------------------------------------------*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    clear: both;
-    font-family: $lato;
-	text-transform: uppercase;
-    font-weight: 900;
-    text-align: center;
+body,
+button,
+input,
+select,
+textarea {
+	color: $color__text-main;
+	font-family: $font__main;
+	@include font-size(1);
+	line-height: $font__line-height-body;
 }
 
-h1 {
-    font-size: 1.8em;
-}
+@import "headings";
 
-h2 {
-	color: $bloom;
-	font-size: 1.7em;
-    margin: 20px 0 3px;
-}
-
-
-/*------------------------------------------------------------------------------
-# SPECIFIC STYLING
-------------------------------------------------------------------------------*/
-.home-heading-subtitle {
-    text-align: center;
-    font-size: 0.9em;
-    display: block;
-    color: $bloom;
-    margin: 0;
-}
+@import "copy";
