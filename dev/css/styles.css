@@ -2930,10 +2930,10 @@ span.infinite-loader {
   background-position: 0 -100px; }
 
 .nav-item-contact a {
-  color: #4b61a6; }
+  color: #5c56a0; }
 
 .nav-item-contact.current-menu-item a {
-  background: #4b61a6;
+  background: #5c56a0;
   color: #fdfdff;
   /*
     &::after {
@@ -3159,11 +3159,11 @@ h2 {
     background: #ff7396; }
 
 .btn-ezra {
-  border-color: #4b61a6;
-  color: #4b61a6; }
+  border-color: #5c56a0;
+  color: #5c56a0; }
   .btn-ezra:hover, .btn-ezra:active {
     color: #fdfdff;
-    background: #4b61a6; }
+    background: #5c56a0; }
 
 .btn-apogee {
   border-color: #fdfdff;
@@ -3193,7 +3193,7 @@ h2 {
   color: #ff7396; }
 
 .strip-ezra .btn:hover {
-  color: #4b61a6; }
+  color: #5c56a0; }
 
 .strip-apollo .btn:hover {
   color: #c1cad6; }
@@ -3229,7 +3229,7 @@ h2 {
   background: #ff7396; }
 
 .strip-ezra {
-  background: #4b61a6; }
+  background: #5c56a0; }
 
 .strip-apollo {
   background: #c1cad6; }
@@ -3396,10 +3396,10 @@ h2 {
 ------------------------------------------------------------------------------*/
   .nav-item-contact a {
     color: #fdfdff;
-    background: #4b61a6; }
+    background: #5c56a0; }
     .nav-item-contact a:hover {
       color: #fdfdff;
-      background: #465b9b; }
+      background: #565196; }
   /*------------------------------------------------------------------------------
 # MENU HIDE
 ------------------------------------------------------------------------------*/
