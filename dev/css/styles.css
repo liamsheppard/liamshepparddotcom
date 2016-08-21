@@ -3351,7 +3351,8 @@ h2 {
     padding-top: 60px; }
   .main-navigation {
     background: #fdfdff;
-    height: 60px; }
+    height: 60px;
+    transition: background 0.4s cubic-bezier(0.72, 0, 0, 0.98), color 0.4s cubic-bezier(0.72, 0, 0, 0.98); }
     .main-navigation ul {
       width: 450px;
       right: 146px;
@@ -3429,7 +3430,8 @@ h2 {
 # MENU HIDE
 ------------------------------------------------------------------------------*/
   .main-navigation.nav-hide {
-    transform: translate(0, -60px); }
+    transform: translate(0, 0);
+    background: #ff7396; }
   /*-----------------------------------------------------------------------------
  # REMOVE ICONS
  -----------------------------------------------------------------------------*/

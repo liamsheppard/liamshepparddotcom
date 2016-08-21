@@ -13,6 +13,9 @@
 .main-navigation {
     background: $apogee;
     height: $wide-nav-height;
+    transition:
+      background 0.4s cubic-bezier(0.72, 0, 0, 0.98),
+      color 0.4s cubic-bezier(0.72, 0, 0, 0.98);
 
     & ul {
         width: 450px;
@@ -127,7 +130,12 @@
 # MENU HIDE
 ------------------------------------------------------------------------------*/
 .main-navigation.nav-hide {
-     transform: translate(0, -$wide-nav-height);
+     //transform: translate(0, -$wide-nav-height);
+     transform: translate(0, 0);
+     background: $bloom;
+
+     // TODO CHANGE COLOURS WHEN USER SCROLLS DOWN. ONLY APPLY TO DESKTOP.
+     // LET MOBILE AND TABLET HIDE.
 }
 
 
