@@ -1,0 +1,108 @@
+/*=============================================================================
+# NAVIGATION SEARCH BAR WIDESCREEN
+==============================================================================*/
+
+/*------------------------------------------------------------------------------
+# SEARCHBAR
+------------------------------------------------------------------------------*/
+.nav-searchbar {
+  position: fixed;
+  width: 100%;
+  z-index: $nav-z-index + 10;
+  height: $wide-nav-height;
+  background: $apogee;
+  transition: transform .4s cubic-bezier(0.72, 0, 0, 0.98);
+  transition-delay: .25s;
+
+  & .search-field {
+    background: none;
+    border: none;
+    color: $drift;
+    //text-transform: uppercase;
+    //font-family: $lato;
+    text-align: center;
+    margin: 5px auto;
+    display: block;
+    line-height: $wide-nav-height - 10px;
+    height: $wide-nav-height - 10px;
+    font-size: 1.8em;
+    width: 60%;
+
+    &:focus {
+      color: $drift;
+    }
+  }
+
+  & .search-submit {
+    display: none;
+  }
+
+  & .searchbar-close {
+    height: $wide-nav-height;
+    width: $wide-nav-height;
+    position: absolute;
+    cursor: pointer;
+
+    &:hover .searchbar-close-svg {
+      fill: $bloom;
+    }
+
+    & .searchbar-close-svg {
+      height: 1.2em;
+      width: auto;
+      fill: $apollo;
+      transition: fill .1s;
+      margin: 20px;
+    }
+  }
+}
+
+
+/*------------------------------------------------------------------------------
+# SEARCHBAR HIDE
+------------------------------------------------------------------------------*/
+.nav-searchbar.nav-hide,
+.nav-searchbar-animate.nav-hide,
+.nav-hide.nav-searchbar-animate::after {
+     transform: translate(0, -$wide-nav-height);
+}
+
+
+/*------------------------------------------------------------------------------
+# SEARCHBAR ANIMATE
+------------------------------------------------------------------------------*/
+.nav-searchbar-animate,
+.nav-searchbar-animate::after {
+  content: '';
+  width: 100%;
+  height: $wide-nav-height;
+  position: fixed;
+  display: block;
+  z-index: $nav-z-index + 5;
+}
+
+.nav-searchbar-animate {
+  background: $drift;
+  transition: transform .4s cubic-bezier(0.72, 0, 0, 0.98);
+}
+
+
+.nav-searchbar-animate::after {
+    background: $ezra;
+    transition: transform .4s cubic-bezier(0.72, 0, 0, 0.98);
+    transition-delay: .1s;
+}
+
+
+/*------------------------------------------------------------------------------
+# SEARCHBAR PLACEHOLDER
+------------------------------------------------------------------------------*/
+.nav-searchbar .search-field::placeholder {
+  color: $apollo;
+  transition: color .2s;
+}
+
+.nav-searchbar .search-field:hover::placeholder,
+.nav-searchbar .search-field:focus::placeholder {
+  color: $apollo-dark;
+}

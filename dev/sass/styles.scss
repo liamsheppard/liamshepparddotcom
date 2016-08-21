@@ -21,7 +21,7 @@
 # MOBILE
 ------------------------------------------------------------------------------*/
 @import 'layout/body';
-@import 'layout/navigation';
+@import 'navigation/navigation';
 @import 'layout/header';
 @import 'layout/footer';
 @import 'typography/typography';
@@ -45,7 +45,8 @@
 ------------------------------------------------------------------------------*/
 @media screen and (min-width: $bp-wide) {
     @import 'layout/body-wide';
-    @import 'layout/navigation-wide';
+    @import 'navigation/navigation-wide';
+    @import 'navigation/nav-search-wide';
     @import 'layout/header-wide';
     @import 'typography/typography-wide';
     @import 'layout/buttons-wide';

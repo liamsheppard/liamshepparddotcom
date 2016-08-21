@@ -6,7 +6,7 @@
 # MOBILE
 ------------------------------------------------------------------------------*/
 .main-navigation {
-    z-index: 500;
+    z-index: $nav-z-index;
     height: $mobile-nav-height;
     position: fixed;
     top: 0;
@@ -46,23 +46,7 @@
 .current-menu-item a {
     color: $apogee;
     background: $bloom;
-
-    &:after {
-        background: $bloom;
-    }
 }
-
-/*
-.nav-item-contact.current-menu-item a::after,
-.current-menu-item a::after {
-    content: '';
-    top: 0;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    height: calc(100% + 1px);
-    z-index: -1;
-} */
 
 
 /*------------------------------------------------------------------------------
@@ -176,9 +160,12 @@ only screen and (min-resolution: 240dpi) {
 .nav-item-contact.current-menu-item a {
     background: $ezra;
     color: $apogee;
+}
 
-    /*
-    &::after {
-        background: $ezra;
-    } */
+
+/*------------------------------------------------------------------------------
+# MOVE MENU BELOW ADMINBAR
+------------------------------------------------------------------------------*/
+.admin-bar .main-navigation {
+    top: 46px;
 }
